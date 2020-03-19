@@ -1,0 +1,39 @@
+// =============================================================================
+// Images Quick Access :)
+// =============================================================================
+@function bgurl($name)
+  @return url('../img/#{$name}')
+
+// =============================================================================
+// String Replace
+// =============================================================================
+@function str-replace($string, $search, $replace: "")
+	$index: str-index($string, $search)
+	@if $index
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace)
+	@return $string
+
+// =============================================================================
+// Strip Unit
+// =============================================================================
+@function strip-unit($number)
+  @if type-of($number) == 'number' and not unitless($number)
+    @return $number / ($number * 0 + 1)
+
+  @return $number
+
+// =============================================================================
+// Calc Fluid Fontsize
+// =============================================================================
+@function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px)
+  $f-min: strip-unit($f-min)
+  $f-max: strip-unit($f-max)
+  $w-min: strip-unit($w-min)
+  $w-max: strip-unit($w-max)
+
+  $k: ($f-max - $f-min)/($w-max - $w-min)
+  $b: $f-min - $k * $w-min
+
+  $b: $b + $units
+
+  @return calc( #{$k} * 100vw + #{$b} )

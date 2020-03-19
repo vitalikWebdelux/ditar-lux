@@ -1,0 +1,96 @@
+.fixed-arrows
+  overflow: hidden
+  &__call,
+  &__top
+    width: 6rem
+    height: 6rem
+    position: fixed
+    bottom: 2rem
+    z-index: 1001
+    transition: transform .5s
+    border-radius: 50%
+    color: $ch-white
+    cursor: pointer
+    text-align: center
+    line-height: 6rem
+    &::after
+      font-family: ci
+    +mq(1600px)
+      bottom: 2rem
+    +mq(lg)
+      bottom: 2rem
+    +mq(md)
+      width: 4rem
+      height: 4rem
+      bottom: 1rem
+      line-height: 4rem
+    &:hover
+      cursor: pointer
+  &__call
+    left: 3.7rem
+    background: $ch-dark
+    &:hover
+      color: $ch-white
+    +mq(md)
+      left: 1rem
+    &::after
+      content: '\e913'
+      font-size: 2.4rem
+      display: inline-block
+      animation: zcwphone 1.5s linear infinite alternate
+      +mq(md)
+        width: 4rem
+        height: 4rem
+        background-size: 50%
+        font-size: 1.7rem
+    &--top
+      transform: translate(0, -100px)
+  &__top
+    right: 3.5rem
+    opacity: 0
+    visibility: hidden
+    transform: translateX(6rem)
+    transition: opacity .5s, transform .5s, visibility .5s
+    font-size: 1.2rem
+    background: $ch-dark
+    +mq(md)      
+      right: 1rem
+    svg
+      stroke-width: 4px
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      path
+        transition: stroke-dashoffset 300ms linear 0s
+        stroke-dasharray: 307.919, 307.919
+        stroke-dashoffset: 194%
+    &::after
+      display: inline-block
+      content: '\e91b'
+      font-size: 1.6rem
+      transform: rotate(-90deg)
+      z-index: 15
+      position: relative
+      +mq(md)
+        font-size: 1.1rem
+
+    &--active
+      visibility: visible
+      opacity: 1
+      transform: translateX(0)
+    &--top
+      transform: translate(0, -100px)
+
+@keyframes zcwphone
+  0%
+    transform: rotate(0deg)
+  25%
+    transform:  rotate(-20deg)
+  50%
+    transform:  rotate(20deg)
+  75%
+    transform: rotate(-20deg)
+  100%
+    transform: rotate(20deg)

@@ -1,0 +1,33 @@
+@import 'vendors/vendors'
+
+@import 'abstracts/variables'
+@import 'abstracts/functions'
+@import 'abstracts/mixins'
+
+@import 'base/fonts'
+@import 'base/typography'
+@import 'base/utilities'
+@import 'base/animations'
+
+@import 'components/buttons'
+
+@import 'layout/header'
+@import 'layout/footer'
+
+@import 'pages/pages'
+
+@import 'themes/themes'
+
+// $list-sections: ('header', 'changed', 'process', 'step', 'beautiful', 'time', 'main-baner')
+
+// // $exlude-sections: (  'instagram', 'subscribe', 'footer', 'invite',  'review-cats')
+// $exlude-sections: ( 'step' )
+
+// @each $section in $list-sections
+//  @if(type-of($list-sections) == 'list')
+//    .#{unquote($section)}
+//      display: none !important
+// @each $section in $exlude-sections
+//  @if(type-of($list-sections) == 'list')
+//    .#{unquote($section)}
+//      display: block !important

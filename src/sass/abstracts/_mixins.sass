@@ -1,0 +1,66 @@
+// =============================================================================
+// Media Queries
+// =============================================================================
+@mixin mq($device-w)
+  @if map-has-key($media-breakpoints, $device-w)
+    @media (max-width: #{map-get($media-breakpoints, $device-w)})
+      @content
+  @else
+    @media (max-width: $device-w)
+      @content
+
+@mixin minq($device-w)
+  @if map-has-key($media-breakpoints, $device-w)
+    @media (min-width: #{map-get($media-breakpoints, $device-w)})
+      @content
+  @else
+    @media (min-width: $device-w)
+      @content
+
+// =============================================================================
+// Font Face
+// =============================================================================
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg)
+  $src: null
+
+  $extmods: ( eot: "?", svg: "#" + str-replace($name, " ", "_") )
+
+  $formats: ( otf: "opentype", ttf: "truetype" )
+  @each $ext in $exts
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext)
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext)
+    $src: append($src, url(quote( $path + "." + $extmod)) format(quote($format)), comma)
+  @font-face
+    font-family: quote($name)
+    font-style: $style
+    font-weight: $weight
+    src: $src
+
+// =============================================================================
+// Text Gradient
+// =============================================================================
+@mixin text-gradient( $gradient, $fallback: #000 )
+  background: $gradient
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  color: $fallback
+
+// =============================================================================
+// Keyframes
+// =============================================================================
+@mixin keyframes ($name) 
+  @keyframes #{$name}
+    @content
+
+@mixin staggered_transitions($nth: 1, $items: 3, $initial: 0, $step: .3)
+  @for $i from $nth through $items
+    &:nth-of-type(#{$i})
+      transition-delay: #{$initial}s
+    $initial: $initial + $step
+
+// =============================================================================
+// Vertical text
+// =============================================================================
+@mixin vertical-text()
+  writing-mode: vertical-rl
+  transform: rotate(-180deg)

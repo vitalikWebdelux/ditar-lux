@@ -1,0 +1,58 @@
+.footer
+	background: $ch-dark
+	padding: 3.5rem	0
+	font-size: 1.4rem
+	
+	&__copyright
+		height: 100%
+		display: flex
+		align-items: center
+		color: $white
+		justify-content: flex-start
+		+mq(lg)
+			justify-content: center
+			margin-bottom: 2rem
+			height: auto
+		+mq(sm)
+			font-size: 1.4rem
+			text-align: center
+
+	&__developers
+		&-link
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			+mq(lg)
+				justify-content: center
+			+mq(sm)
+				flex-direction: column
+			&:hover,
+			&:active,
+			&:visited
+				color: inherit
+				text-decoration: none
+
+			svg,
+			img
+				margin-left: 2rem
+				height: 3.8rem
+				width: 18rem
+				+mq(sm)
+					margin: 0
+
+			span
+				margin-bottom: .5rem
+				color: $white
+				+mq(sm)
+					margin-bottom: 1rem
+
+
+.footer-wrap
+
+	&--fixed
+		position: fixed
+		z-index: 1
+		width: 100%
+		bottom: 0
+		backface-visibility: hidden
+		

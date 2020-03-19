@@ -1,0 +1,35 @@
+button.slick-arrow
+	border: 0
+	background: $ch-black
+	position: absolute
+	z-index: 10
+	font-size: 0
+	color: $ch-white
+	width: 6rem	
+	height: 6rem
+	line-height: 6rem
+	padding: 0
+	bottom: 5rem
+	right: 50%		
+	transform: translateX(50%)
+	transition: background .3s
+	&:hover
+		background: #1b1b1c
+	&::before
+		content: '\e91a'
+		font-family: ci
+		font-size: 1rem
+		color: #e5e5e5
+	&:focus
+		outline: none
+	+mq(xl)
+		width: 4rem
+		height: 4rem
+		line-height: 4rem
+
+	&.slick-next
+		transform: translateX(100%)
+		&::before
+			content: '\e91b'
+	&.slick-prev
+		transform: translateX(0%)

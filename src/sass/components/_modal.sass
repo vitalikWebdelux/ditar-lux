@@ -1,0 +1,131 @@
+.ch-modal
+	&--reserve
+		.modal-dialog
+			max-width: 100%
+			margin: 0
+			height: 100%
+			background-color: rgba(0, 0, 0, .4)
+
+		.modal-content
+			background-color: transparent
+			border: none
+			height: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 0 1rem
+		.ch-button
+			font-size: 1.6rem
+
+	.close
+		position: absolute
+		top: 5rem
+		right: 5rem
+		background: transparent
+		border: 0
+		padding: 0
+		+mq(lg)
+			right: 50%
+			transform: translateX(50%)
+
+		&:focus
+			outline: none
+
+	&__image
+		position: absolute
+		right: 0
+		bottom: 0
+		+mq(1370px)
+			max-width: 35rem
+		+mq(1120px)
+			display: none
+
+	&__form
+		padding: 5rem
+		background: $ch-dark
+		max-width: 48rem
+		width: 100%
+		+mq(lg)
+			padding: 3rem
+		h3
+			text-align: center
+			font-size: 3rem
+			color: $ch-white
+			margin-bottom: 3rem
+		p
+			text-align: center
+			font-size: 1.6rem
+		.form-group
+			margin-bottom: 3rem
+			&::before
+				left: 1rem
+			&:last-child
+				margin-bottom: 0
+			[type='submit']
+				max-width: 100%
+
+.modal-reserve
+	width: 769px
+	max-width: 100%
+	+mq(lg)
+		padding: 0 1.5rem
+	.ch-title
+		display: inline-block
+		+mq(sm)
+			font-size: 3.2rem
+		+mq(374px)
+			text-align: center
+	&__heading
+		margin-bottom: 8rem
+		+mq(lg)
+			margin-bottom: 5rem
+		.line-before
+			&__line
+				+mq(374px)
+					display: none
+	.line-before
+		&__line
+			width: auto
+			margin-right: 0
+			margin-left: 2rem
+			flex: auto
+
+	&__text
+		font-size: 3.6rem
+		text-align: right
+		margin-bottom: 8rem
+		+mq(lg)
+			font-size: 2.6rem
+			margin-bottom: 5rem
+		+mq(sm)
+			font-size: 1.4rem
+		+mq(374px)
+			text-align: center
+
+	&__btn
+		.line-before
+			flex-wrap: wrap
+			&__line
+				margin: 0 1.5rem
+				+mq(sm)
+					margin: 0 1.5rem 0 0
+
+			p
+				color: $ch-blue
+				font-size: 1.6rem
+				font-family: gmm
+				+mq(sm)
+					flex: 0 0 100%
+					text-align: center
+					margin-bottom: 2.5rem
+				span
+					color: $ch-white
+
+
+
+
+
+
+
+
+

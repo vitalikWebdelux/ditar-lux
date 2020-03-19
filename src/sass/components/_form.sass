@@ -1,0 +1,55 @@
+.ch-form
+	
+	&--black
+		.form-group
+			[type='text']
+				background: #0f0f10
+				color: $ch-white
+				border-bottom: 1px solid #363636
+
+			&::before
+				color: $ch-blue
+.form-group
+	position: relative
+	br
+		display: none
+	&::before
+		content: ''
+		font-family: ci
+		color: #ccc
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		font-size: 2.4rem
+		z-index: 5
+		left: 5px
+
+	.wpcf7-not-valid-tip
+		position: absolute
+		width: 100%
+		right: 0
+		left: 0
+
+	.wpcf7-form-control-wrap
+		position: static
+		
+	&--name
+		&::before
+			content: '\e917'
+
+	&--phone
+		&::before
+			content: '\e913'
+
+
+[type='text']
+	height: 6rem
+	border: none
+	border-bottom: 1px solid $ch-dark
+	font-size: 1.6rem
+	width: 100%
+	padding-left: 4rem
+	border-radius: 0
+	&:focus
+		outline: none
+		box-shadow: 0 0 0 1px rgba($ch-blue, .5)
