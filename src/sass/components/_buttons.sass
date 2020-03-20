@@ -1,40 +1,37 @@
-.nm-button
+.dl-btn
   display: inline-block
   text-align: center
   height: 6rem
-  padding: 0 2rem
-  color: $white
-  font: 1.4rem/6rem gm, sans-serif
+  padding: 0 4rem
+  color: $dl-white
   background-size: cover
   background-repeat: no-repeat
-  background-color: transparent
-  border: 0
-  max-width: 24rem
+  font-size: 36px
+  max-width: 29.6rem
   width: 100%
   white-space: nowrap
   user-select: none
   cursor: pointer
   transition: color .25s, box-shadow .25s, background-color .25s
   position: relative
-  // box-shadow: 0px 20px 30px 0px rgba(1, 1, 1, 0.1)
-  background: $ch-dark-btn
-  background-size: 200% 100%
-  background-position: center
   transition: background .5s, box-shadow .5s
-  border-radius: 0
+  border-radius: 5px
   &--full
     max-width: 100%
     width: auto
-  &--white-border
-    border: 1px solid $white
+  &--border-white
+    border: 3px solid $dl-white
+    font-weight: bold
+    background-color: transparent
+
   
   &--dark-border
-    border: 1px solid $ch-dark
-    background: $white
-    color: $ch-dark
+    border: 1px solid $dl-dark
+    background: $dl-white
+    color: $dl-dark
     &:hover
-      background: $ch-dark 
-      color: $white
+      background: $dl-dark 
+      color: $dl-white
 
   &:focus
     outline: none
@@ -47,14 +44,14 @@
   &:hover
     background-size: 100% 100%
     box-shadow: 0px 20px 30px -20px rgba(1, 1, 1, 0.3)
-    color: $white
+    color: $dl-white
 
 
   &--white
-    color: $ch-dark-btn
-    background: $ch-white
+    color: $dl-dark-btn
+    background: $dl-white
     &:hover
-      color: $ch-dark-btn
+      color: $dl-dark-btn
   
   &--target
     // animation: ch-pulse .5s infinite cubic-bezier(0.64, 0.57, 0.67, 1.53)
@@ -78,12 +75,12 @@
 
     &-white
       &::before
-        background: rgba($ch-dark,0.8)
+        background: rgba($dl-dark,0.8)
     &-dark
       &::before
-        background: rgba($ch-white,0.8)
+        background: rgba($dl-white,0.8)
 
-@keyframes ch-pulse
+@keyframes pulse
   0%
     transform: scale(1)
   50%

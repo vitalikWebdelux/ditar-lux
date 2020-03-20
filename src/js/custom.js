@@ -140,7 +140,6 @@ var chThemeModule;
 
 		return {
 			init: function() {
-				this.initCursors();
 				this.leafletMap();
 			},
 

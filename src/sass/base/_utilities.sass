@@ -13,7 +13,7 @@ p
   padding: 0
 
 p
-  color: $white
+  color: $dl-white
 
   
   // color: $text-color
@@ -46,26 +46,27 @@ span.wpcf7-not-valid-tip
 body
   .container
     @media (min-width: 1200px)
-      max-width: 140rem
+      max-width: 117rem
     @media (max-width: 1200px)
       max-width: 100%
 
 ::-webkit-scrollbar
   width: .5rem
 ::-webkit-scrollbar-track
-  background: $white
+  background: $dl-white
 ::-webkit-scrollbar-thumb
-  background: $ch-blue
+  background: $dl-blue
 ::-webkit-scrollbar-thumb:hover
-  background: lighten($ch-blue, 5%)
+  background: lighten($dl-blue, 5%)
 
 body.modal-open > :not(.modal):not(.cursor)
   transition: 1s
   filter: blur(4px)
 
-.ch-main
+.dl-main
   position: relative
   z-index: 49
 
-.ch-sertificats
-  display: none
+img
+  max-width: 100%
+  height: auto

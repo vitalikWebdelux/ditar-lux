@@ -1,14 +1,15 @@
 body
-	font-family: gml, sans-serif
+	font-family: g, sans-serif
 	min-width: 320px
 
-.ch-title
-	font-family: yo, sans-serif
-	font-size: 5.2rem
+.dl-title
+	font-size: 48px
+	font-family: gb, sans-serif
 	line-height: 1
-	margin-bottom: 1rem
+	span
+		color: $dl-red
 	&--white
-		color: $ch-white
+		color: $dl-white
 
 	+mq(xl)
 		font-size: 4.6rem
@@ -17,13 +18,18 @@ body
 		font-size: 3.8rem
 	+mq(413px)
 		font-size: 3.6rem
+.dl-title, .dl-description
+	&--x
+	&--l
+	&--m
+	&--s
 
-.ch-description
-	color: $ch-white
+.dl-description
+	color: $dl-white
 	font-size: 3rem
 	line-height: 1.2
 	&--dark
-		color: $ch-dark
+		color: $dl-dark
 	+mq(1370px)
 		font-size: 2.6rem
 	+mq(xl)
