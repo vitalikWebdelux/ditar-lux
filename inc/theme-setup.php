@@ -2,7 +2,7 @@
 /**
  * Theme basic setup.
  *
- * @package effectprof
+ * @package ditarlux
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -14,13 +14,13 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-add_action( 'after_setup_theme', 'effectprof_setup' );
+add_action( 'after_setup_theme', 'ditarlux_setup' );
 
-if ( ! function_exists ( 'effectprof_setup' ) ) {
+if ( ! function_exists ( 'ditarlux_setup' ) ) {
 
-	function effectprof_setup() {
+	function ditarlux_setup() {
 
-		load_theme_textdomain( 'effectprof', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'ditarlux', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -28,8 +28,8 @@ if ( ! function_exists ( 'effectprof_setup' ) ) {
 		add_theme_support( 'title-tag' );
 
 		register_nav_menus( array(
-			'main_menu'   => esc_html__( 'Main menu', 'effectprof' ),
-			'lang_menu'   => esc_html__( 'Lang menu', 'effectprof' ),
+			'main_menu'   => esc_html__( 'Main menu', 'ditarlux' ),
+			'lang_menu'   => esc_html__( 'Lang menu', 'ditarlux' ),
 		) );
 
 		add_theme_support( 'html5', array(
@@ -65,11 +65,11 @@ if ( ! function_exists ( 'effectprof_setup' ) ) {
 }
 
 
-add_filter( 'excerpt_more', 'effectprof_custom_excerpt_more' );
+add_filter( 'excerpt_more', 'ditarlux_custom_excerpt_more' );
 
-if ( ! function_exists( 'effectprof_custom_excerpt_more' ) ) {
+if ( ! function_exists( 'ditarlux_custom_excerpt_more' ) ) {
 
-	function effectprof_custom_excerpt_more( $more ) {
+	function ditarlux_custom_excerpt_more( $more ) {
 		if ( ! is_admin() ) {
 			$more = '';
 		}
@@ -78,14 +78,14 @@ if ( ! function_exists( 'effectprof_custom_excerpt_more' ) ) {
 
 }
 
-add_filter( 'wp_trim_excerpt', 'effectprof_all_excerpts_get_more_link' );
+add_filter( 'wp_trim_excerpt', 'ditarlux_all_excerpts_get_more_link' );
 
-if ( ! function_exists( 'effectprof_all_excerpts_get_more_link' ) ) {
+if ( ! function_exists( 'ditarlux_all_excerpts_get_more_link' ) ) {
 
-	function effectprof_all_excerpts_get_more_link( $post_excerpt ) {
+	function ditarlux_all_excerpts_get_more_link( $post_excerpt ) {
 		if ( ! is_admin() ) {
 			$post_excerpt = $post_excerpt . ' <a href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
-			'effectprof' ) . '</a>';
+			'ditarlux' ) . '</a>';
 		}
 		return $post_excerpt;
 	}

@@ -1,8 +1,8 @@
 <?php
 /**
- * chopovskyi ajax
+ * ditarlux ajax
  *
- * @package effectprof
+ * @package ditarlux
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -31,7 +31,7 @@ function calc_form() {
 
 	}
 
-	$headers = 'Content-Type: text/html; From: <admin@effectprof.com>' . "\r\n";
+	$headers = 'Content-Type: text/html; From: <admin@ditarlux.com>' . "\r\n";
   	wp_mail( $to, $subject, $message, $headers );
 
 	$sendToTelegram = fopen('https://api.telegram.org/bot962914608:AAFI7cJIARsmwWRpw5g7tBimsjlznvpFl9s/sendMessage?chat_id=370558652&text=Заявка калькулятор: '.htmlspecialchars( $_POST['your-phone'] ).'',"r");

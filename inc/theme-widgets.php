@@ -2,7 +2,7 @@
 /**
  * Declaring widgets
  *
- * @package effectprof
+ * @package ditarlux
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -11,12 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_filter( 'dynamic_sidebar_params', 'effectprof_widget_classes' );
 
-if ( ! function_exists( 'effectprof_widget_classes' ) ) {
+if ( ! function_exists( 'ditarlux_widget_classes' ) ) {
 	/**
 	 * Count number of visible widgets in a sidebar and add classes to widgets accordingly,
 	 * so widgets can be displayed one, two, three or four per row.
 	 */
-	function effectprof_widget_classes( $params ) {
+	function ditarlux_widget_classes( $params ) {
 
 		global $sidebars_widgets;
 
@@ -54,17 +54,17 @@ if ( ! function_exists( 'effectprof_widget_classes' ) ) {
 	}
 }
 
-add_action( 'widgets_init', 'effectprof_widgets_init' );
-if ( ! function_exists( 'effectprof_widgets_init' ) ) {
+add_action( 'widgets_init', 'ditarlux_widgets_init' );
+if ( ! function_exists( 'ditarlux_widgets_init' ) ) {
 	/**
 	 * Initializes themes widgets.
 	 */
-	function effectprof_widgets_init() {
+	function ditarlux_widgets_init() {
 		register_sidebar(
 			array(
-				'name'          => __( 'Right Sidebar', 'effectprof' ),
+				'name'          => __( 'Right Sidebar', 'ditarlux' ),
 				'id'            => 'right-sidebar',
-				'description'   => __( 'Right sidebar widget area', 'effectprof' ),
+				'description'   => __( 'Right sidebar widget area', 'ditarlux' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -74,9 +74,9 @@ if ( ! function_exists( 'effectprof_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Left Sidebar', 'effectprof' ),
+				'name'          => __( 'Left Sidebar', 'ditarlux' ),
 				'id'            => 'left-sidebar',
-				'description'   => __( 'Left sidebar widget area', 'effectprof' ),
+				'description'   => __( 'Left sidebar widget area', 'ditarlux' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -86,9 +86,9 @@ if ( ! function_exists( 'effectprof_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer', 'effectprof' ),
+				'name'          => __( 'Footer', 'ditarlux' ),
 				'id'            => 'footer-full',
-				'description'   => __( 'Full sized footer widget with dynamic grid', 'effectprof' ),
+				'description'   => __( 'Full sized footer widget with dynamic grid', 'ditarlux' ),
 				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
 				'after_widget'  => '</div><!-- .footer-widget -->',
 				'before_title'  => '<h3 class="widget-title">',

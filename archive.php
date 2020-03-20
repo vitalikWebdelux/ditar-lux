@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package effectprof
+ * @package ditarlux
  */
 
 get_header();

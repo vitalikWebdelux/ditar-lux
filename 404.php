@@ -4,12 +4,12 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package effectprof
+ * @package ditarlux
  */
 
 get_header(); ?>
 	<section class="error-page">
-		<h1><span>404. </span> <?php _e('Простите, такой страницы не существует!', 'effectprof'); ?> </h1>
-		<a href="<?php echo site_url();?>" class="ch-button"><?php _e('На главную', 'effectprof'); ?></a>
+		<h1><span>404. </span> <?php _e('Простите, такой страницы не существует!', 'ditarlux'); ?> </h1>
+		<a href="<?php echo site_url();?>" class="ch-button"><?php _e('На главную', 'ditarlux'); ?></a>
 	</section>
 <?php get_footer();

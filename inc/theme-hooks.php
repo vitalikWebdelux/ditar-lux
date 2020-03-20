@@ -2,7 +2,7 @@
 /**
  * Custom hooks.
  *
- * @package effectprof
+ * @package ditarlux
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

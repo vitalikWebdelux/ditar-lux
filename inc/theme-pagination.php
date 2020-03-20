@@ -2,15 +2,15 @@
 /**
  * Pagination layout.
  *
- * @package effectprof
+ * @package ditarlux
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( ! function_exists( 'ch_pagination' ) ) {
-	function ch_pagination( $args = array(), $class = 'lt-pagination' ) {
+if ( ! function_exists( 'dl_pagination' ) ) {
+	function dl_pagination( $args = array(), $class = 'lt-pagination' ) {
 
 		if ( $GLOBALS['wp_query']->max_num_pages <= 1 ) {
 			return;
@@ -20,9 +20,9 @@ if ( ! function_exists( 'ch_pagination' ) ) {
 			array(
 				'mid_size'           => 2,
 				'prev_next'          => true,
-				'prev_text'          => __( '&laquo;', 'effectprof' ),
-				'next_text'          => __( '&raquo;', 'effectprof' ),
-				'screen_reader_text' => __( 'Posts navigation', 'effectprof' ),
+				'prev_text'          => __( '&laquo;', 'ditarlux' ),
+				'next_text'          => __( '&raquo;', 'ditarlux' ),
+				'screen_reader_text' => __( 'Posts navigation', 'ditarlux' ),
 				'type'               => 'array',
 				'current'            => max( 1, get_query_var( 'paged' ) ),
 			)

@@ -2,7 +2,7 @@
 /**
  * effectprof carbon fields
  *
- * @package effectprof
+ * @package ditarlux
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

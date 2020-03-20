@@ -2,7 +2,7 @@
 /**
  * Theme optimize.
  *
- * @package effectprof
+ * @package ditarlux
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

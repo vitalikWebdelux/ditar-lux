@@ -1,8 +1,8 @@
 <?php
 /**
- * effectprof functions and definitions
+ * ditarlux functions and definitions
  *
- * @package effectprof
+ * @package ditarlux
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -28,7 +28,7 @@ define( 'SD_THEME_URI', get_template_directory_uri() );
 define( 'SD_THEME_IMAGE_URI', get_template_directory_uri() . '/assets/img' );
 define( 'SD_INC_DIR', wp_normalize_path( SD_THEME_DIR . DS . 'inc') );
 
-$smoky_dance_includes = array(
+$ditarlux_includes = array(
 	// Base Theme
 	'/theme-settings.php',                  // Initialize theme default settings.
 	'/theme-ajax.php',                  // ajax
@@ -46,7 +46,7 @@ $smoky_dance_includes = array(
 	'/classes/class-seo-walker.php',
 );
 
-foreach ( $smoky_dance_includes as $file ) {
+foreach ( $ditarlux_includes as $file ) {
 	// Retrieve the name of the highest priority template file that exists, optionally loading that file.
 	$filepath = locate_template( 'inc' . $file );
 	if ( ! $filepath ) {
