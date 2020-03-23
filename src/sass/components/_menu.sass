@@ -1,0 +1,51 @@
+.main-menu
+	width: 100%
+	display: flex
+	list-style-type: none
+	justify-content: space-between
+	padding: 0
+	margin: 0
+	height: 88px
+	align-items: center
+	background-color: $dl-white
+
+
+.menu-item
+	width: calc(100% / 3)
+	display: flex
+	justify-content: center
+	align-items: center
+	border-top: 0
+	height: 100%
+	padding-top: 5px
+	&:first-child
+		justify-content: flex-start
+
+	&:last-child
+		justify-content: flex-end
+
+	font-size: 24px
+	font-family: gb
+
+	&:nth-child(2)
+		position: relative
+		&::before, &::after
+			content: ''
+			width: 1px
+			height: 100%
+			background-color: #E5E5E5
+			position: absolute
+
+		&::before
+			left: -45px
+
+		&::after
+			right: -45px
+
+
+
+
+
+.current-menu-item
+	a
+		color: $dl-red

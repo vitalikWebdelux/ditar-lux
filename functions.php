@@ -39,6 +39,7 @@ $ditarlux_includes = array(
 	'/template-tags.php',                   // Custom template tags for this theme.
 	'/theme-pagination.php',                      // Custom pagination for this theme.
 	'/theme-hooks.php',                           // Custom hooks.
+	// '/send.php',                           // Custom hooks.v
 	'/theme-extras.php',                          // Custom functions that act independently of the theme templates.
 	'/tgm/khl-register-plugins.php',        // Register Plugins.
 	'/classes/class-carbon-fields.php',  // Carbon fields
@@ -53,4 +54,33 @@ foreach ( $ditarlux_includes as $file ) {
 		trigger_error( sprintf( 'Error locating /inc%s for inclusion', $file ), E_USER_ERROR );
 	}
 	require_once $filepath;
+}
+
+add_action('admin_print_footer_scripts', 'my_action_javascript', 99);
+function my_action_javascript() {
+	?>
+	<script>
+	jQuery(document).ready(function($) {
+		var data = {
+			action: 'my_action',
+			whatever: 1234
+		};
+
+		// с версии 2.8 'ajaxurl' всегда определен в админке
+		jQuery.post( ajaxurl, data, function(response) {
+			alert('Получено с сервера: ' + response);
+		});
+	});
+	</script>
+	<?php
+}
+
+add_action( 'wp_ajax_my_action', 'my_action_callback' );
+function my_action_callback() {
+	$whatever = intval( $_POST['whatever'] );
+
+	$whatever += 10;
+	echo $whatever;
+
+	wp_die(); // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
 }

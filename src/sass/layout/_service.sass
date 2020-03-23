@@ -2,6 +2,8 @@
 	display: flex
 	align-items: center
 	height: calc(100% - 130px)
+	+mq(lg)
+		height: auto
 
 	&-wrap
 		height: 100vh
@@ -13,6 +15,11 @@
 		border-radius: 5px
 		max-width: 375px
 		height: 406px
+		+mq(lg)
+			width: 100%
+			max-width: none
+		+mq(sm)
+			height: 203px
 
 	&__btn-wrap
 		display: flex

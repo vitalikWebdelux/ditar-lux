@@ -1,0 +1,43 @@
+.dl-form
+	&__inner
+		height: 681px
+		overflow: hidden
+		width: 100%
+		&::before
+			content: ''
+			background-image: url('../img/form-car.png')
+			background-size: cover
+			background-repeat: no-repeat
+			width: 502px
+			height: 681px
+	&__title
+		color: $dl-white
+		margin-bottom: 50px
+
+	&__subtitle
+		margin-bottom: 30px
+
+
+
+	&__list
+		display: flex
+		justify-content: center
+		margin-bottom: 70px
+
+	&__item
+		max-width: 370px
+		&:first-child
+			margin-right: 60px
+	
+		p
+			padding-left: 21px
+			position: relative
+			&::before
+				content: ''
+				width: 13px
+				height: 13px
+				border-radius: 50%
+				position: absolute
+				left: 0
+				top: 4px
+				background-color: $dl-red

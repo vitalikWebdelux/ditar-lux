@@ -38,10 +38,17 @@ span.wpcf7-not-valid-tip
     outline: none !important
 .slick-list
   outline: none !important
-.text-center
-  text-align: center
+
 .ajax-loader
   display: none !important
+
+.mt-lg-30
+  +mq(lg)
+    margin-top: 30px
+
+.mt-md-15
+  +mq(md)
+    margin-top: 15px
 
 body
   .container
@@ -63,10 +70,14 @@ body.modal-open > :not(.modal):not(.cursor)
   transition: 1s
   filter: blur(4px)
 
-.dl-main
-  position: relative
-  z-index: 49
+// .dl-main
 
 img
   max-width: 100%
   height: auto
+
+a
+  color: inherit
+  &:hover
+    color: inherit
+    text-decoration: none

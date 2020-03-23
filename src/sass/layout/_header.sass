@@ -1,7 +1,118 @@
 .dl-header
-	height: 129px
-	background-color: $dl-dark
+	height: 129px 
+
+	&__overlay
+		background-color: $dl-dark
+
+	&__bottom
+		background-color: $dl-white
+		position: relative
+		z-index: 10
+		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.08)
+
+
+	&__inner
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	p
+		text-transform: uppercase
+		margin-bottom: 5px
+		text-align: center
 
 	button
 		font-size: 14px
+		width: auto
 		font-style: normal
+		height: 44px
+		text-transform: uppercase
+		padding-left: 55px
+		padding-right: 13px
+
+	&__phone-wrap 
+
+	&__phones-wrap
+		position: relative
+		padding-left: 52px
+
+	&__phone
+		color: $dl-white
+		display: block
+		font-size: 18px
+		&:hover
+			color: $dl-white
+
+	&__icons-wrap
+		height: 44px
+		display: flex
+		align-items: center
+
+	&__logo-wrap
+		display: flex
+		align-items: center
+		svg
+			background-color: #fff
+			height: 129px
+
+	&__logo-description
+		padding-left: 20px
+		margin-bottom: 0
+		
+	&__ico
+		border-radius: 5px
+		&::before
+			
+			color: $dl-white
+
+		&--smartfon
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			height: 44px
+			width: 41px
+			background-color: $dl-red
+
+			&::before
+				font-size: 32px
+
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+
+		&--tg
+			height: 44px
+			width: 41px
+			background-color: $dl-red
+			margin-right: 42px
+			position: relative
+			+mq(xl)
+				margin-right: 20px
+			&::before
+				position: absolute
+				font-size: 30px
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+
+		&--vb
+			height: 44px
+			width: 41px
+			background-color: $dl-red
+			position: relative
+			&::before
+				position: absolute
+				font-size: 30px
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+
+		&--phone
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 13px
+			&::before
+				font-size: 20px

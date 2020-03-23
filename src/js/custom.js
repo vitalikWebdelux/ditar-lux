@@ -140,7 +140,9 @@ var chThemeModule;
 
 		return {
 			init: function() {
-				this.leafletMap();
+				this.leafletMap(); 
+				this.ajaxHandler();
+				this.sliders();
 			},
 
 			/**
@@ -182,6 +184,61 @@ var chThemeModule;
 				}
 				
 			},
+
+			ajaxHandler: function() {
+		        $('body').on('submit', 'form', function (e) {
+			        e.preventDefault();
+			        var formData = $(this).serializeArray();
+			        $.ajax({
+			            type: 'POST',
+			            url: "/wp-admin/admin-ajax.php",
+			            data: formData,
+			            beforeSend: function beforeSend() {
+			           
+			            },
+				            success: function success(data) {
+					              console.log('send')
+				            },
+				            error: function error(data) {
+				              console.log('error: ' + formData);
+				            }
+			          	});
+		          	return false;
+		        });
+      		},
+
+      		sliders: function(){
+      			if($('.dl-hero__slider').length > 0){
+      				$('.dl-hero__slider').slick({
+      					slidesToShow: 1,
+						slidesToScroll: 1,
+						nextArrow: "<button class=\"dl-hero__slider-next dl-ico dl-ico--arrow slick-arrow--next\"></button>",
+						prevArrow: "<button class=\"dl-hero__slider-prev dl-ico dl-ico--arrow slick-arrow--prev\"></button>",
+						dots: true,
+						autoplay: true,
+  						autoplaySpeed: 5000,
+  						dotsClass: 'red-dots',
+						// responsive: [{
+						// 		breakpoint: 760,
+						// 		settings: {
+						// 			slidesToShow: 2,
+						// 		},
+								
+						// 	},
+						// 	{
+						// 		breakpoint: 500,
+						// 		settings: {
+						// 			slidesToShow: 1,
+						// 			variableWidth: true,
+						// 		}
+						// 	},
+						
+						// ],
+      				})
+      			}
+      		}
+
+
 		}
 	}());
 })(jQuery);
