@@ -1,5 +1,6 @@
 body
 	font-family: g, sans-serif
+	font-size: 16px
 	min-width: 320px
 
 // .dl-title
@@ -20,11 +21,18 @@ body
 .dl-title
 	line-height: 1
 	font-family: gb
+	+mq(sm)
+		font-size: 26px
 	span
 		color: $dl-red
 	&--x
 		font-size: 64px
 		font-family: geb
+		+mq(xl)
+			font-size: 26px
+
+	&--h
+		font-size: 48px
 
 	&--l
 		font-size: 36px
@@ -32,12 +40,14 @@ body
 
 	&--s
 		font-size: 20px
+		+mq(sm)
+			font-size: 18px
+
 
 
 
 .dl-desk
 	line-height: 1.2
-	font-family: g
 	&--dark
 		color: $dl-dark
 
@@ -69,3 +79,6 @@ body
 	
 .dl-red
 	color: $dl-red
+
+.dl-white
+	color: $dl-white

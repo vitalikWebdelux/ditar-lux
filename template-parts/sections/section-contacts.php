@@ -1,3 +1,61 @@
+<section class="dl-contacts">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="dl-contacts__overlay">
+					<div class="dl-contacts__wrap">
+						<!-- <span class="dl-ico dl-ico--smartfon dl-contacts__ico dl-white"></span> -->
+						<p class="dl-textline dl-textline--x dl-red">
+							<span class="dl-contacts__ico dl-contacts__ico--geo dl-white"></span>
+							Завітайте:
+						</p> 
+						<p class="dl-white dl-contacts__adress">м. Івано-Франківськ вул.Надрічна 56в</p>
+					</div>
+
+					<div class="dl-contacts__wrap">
+						<!-- <span class="dl-ico dl-ico--smartfon dl-contacts__ico dl-white"></span> -->
+						<p class="dl-textline dl-textline--x  dl-red">
+							<span class="dl-ico dl-ico--smartfon dl-contacts__ico dl-white"></span>
+							Телефонуйте:
+						</p>
+						<p class="dl-white">
+							<a href="#">+38 (095) 111-49-90 Автосервіс</a>
+						</p>
+						<p class="dl-white">
+							<a href="#">+38 (095) 111-71-35 Авто з США</a>
+						</p>
+						<p class="dl-white">
+							<a href="#">+38 (095) 111-83-86 інф. підтримка</a>
+						</p>
+						<div class="dl-contacts__btn-wrap">
+							<button class="dl-btn dl-btn--border-white dl-btn--small">
+								<span class="dl-ico dl-ico--phone dl-header__ico dl-header__ico--phone"></span>
+								Подзвоніть мені
+							</button>
+						</div>
+					</div>
+
+					<div class="dl-contacts__soc-wrap">
+						<p class="dl-textline dl-textline--x  dl-red">
+							Пишіть:
+						</p>
+						<div class="dl-header__icons-wrap">
+							<a href="#" class="dl-ico dl-ico--tg dl-white dl-contacts__soc">Telegram</a>
+							<a href="#" class="dl-ico dl-ico--vb dl-white dl-contacts__soc">Viber</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-lg-8">
+				<div class="dl-map-wrap">
+                    <div id="dl-map"></div>
+                </div>
+			</div>
+		</div>
+	</div>
+</section>
 <footer class="footer">
 	<div class="container">
 		<div class="row">

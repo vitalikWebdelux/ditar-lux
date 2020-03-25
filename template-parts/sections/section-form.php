@@ -1,6 +1,6 @@
 <section class="dl-form bg bg--form">
-	<div class="dl-form__inner">
-		
+	<div class="dl-form__auto-img-wrap">
+		<img src="<?php echo SD_THEME_IMAGE_URI; ?>/form-car.png" alt="">
 	</div>
 	<div class="container-fluid">
 		<div class="row no-gutters">
@@ -20,12 +20,13 @@
 						</li>
 					</ul>
 
-					<form action="">
-					</form>
-				</div>
 
-				
+					<?php echo do_shortcode('[contact-form-7 id="13" title="Отримайте 3 варіанта авто"]'); ?>
+					
+
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
+

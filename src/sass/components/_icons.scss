@@ -1,14 +1,24 @@
-
-
 @include icomoon('ci', 'fonts/icomoon/icomoon', (
-	arrow: "\e900",
+	arrow: "\e900", 
 	arrow_xl: "\e911",
 	name: "",
 	phone: "\e907",
 	smartfon: "\e908",
 	message: "",
-	auto: "\e90a", 
-	autoup: "\e903",
+	geo: "\e90d",
+
+	auto: "\e90a",
+	repair: "\e903",
+	calc: "\e901",
+	progres: "\e904",
+	wallet: "\e90c",
+	delivery: "\e912",
+	clearance: "\e906",
+	sertif: "\e905",
+
+	garage: "\e914",
+	price: "\e913",
+
 	tg: "\e909",
 	vb: "\e90b"
 ))   

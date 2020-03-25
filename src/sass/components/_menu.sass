@@ -18,11 +18,23 @@
 	border-top: 0
 	height: 100%
 	padding-top: 5px
+	+mq(1500px)
+		border: 1px solid #E5E5E5
+		border-top: 0
+		border-bottom: 0
+
 	&:first-child
 		justify-content: flex-start
+		+mq(1500px)
+			justify-content: center
+			border-left: 0
 
 	&:last-child
 		justify-content: flex-end
+		
+		+mq(1500px)
+			justify-content: center
+			border-right: 0
 
 	font-size: 24px
 	font-family: gb
@@ -35,6 +47,9 @@
 			height: 100%
 			background-color: #E5E5E5
 			position: absolute
+			+mq(1500px)
+				content: none
+
 
 		&::before
 			left: -45px

@@ -10,101 +10,9 @@
 @import 'base/animations'
 
 @import 'components/buttons'
+@import 'components/form'
 
-.slick-arrow
-	border: 0
-	background: $dl-white
-	position: absolute
-	z-index: 10
-	color: $dl-dark
-	border-radius: 50%
-	width: 6rem	
-	height: 6rem
-	line-height: 6rem
-	padding: 0
-	bottom: 5rem
-	right: 50%		
-	transform: translateX(50%)
-	transition: all .3s ease
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-
-	+mq(1300px)
-		top: auto
-		bottom: 50px
-
-	&:hover
-		background: $dl-red
-		&::before
-			color: $dl-white
-	&::before
-		
-		font-family: ci
-		font-size: 22px
-		position: absolute	
-		top: 50%	
-		left: 50%	
-		transform: translate(-50%, -50%)
-		+mq(xl)
-			font-size: 16px
-
-	&:focus
-		outline: none
-	+mq(xl)
-		width: 4rem
-		height: 4rem
-		line-height: 4rem
-
-	&.slick-next
-		transform: translateX(100%)
-
-	&.slick-prev
-		transform: translateX(0%)
-		
-
-	&--next
-		top: 50%
-		right: 30px
-		transform: translateX(-50%) rotate(180deg)
-		
-	&--prev
-		top: 50%
-		left: 30px
-		
-.slick-list, .slick-track
-	height: 100%
-
-.red-dots
-	list-style: none
-	display: flex
-	padding: 0	
-	margin: 0	
-	bottom: 100px
-	position: absolute
-	left: 50%
-	transform: translateX(-50%)
-	+mq(1300px)
-		bottom: 70px
-
-	li
-		display: inline-block
-		margin-right: 42px
-		+mq(xl)
-			margin-right: 21px
-		&:last-child
-			margin-right: 0	
-	button
-		background-color: $dl-dark
-		border: none
-		border-radius: 50%
-		font-size: 0
-		padding: 0	
-		width: 13px
-		height: 13px	
-
-	.slick-active
-		button
-			background-color: $dl-red
-
+@import 'components/slick'
 
 @import 'components/bg'
 @import 'components/menu'
@@ -115,7 +23,9 @@
 @import 'layout/hero'
 @import 'layout/service'
 @import 'layout/scheme'
+@import 'layout/features'
 @import 'layout/form'
+@import 'layout/contacts'
 @import 'layout/footer'
 
 @import 'pages/pages'

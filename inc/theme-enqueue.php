@@ -25,6 +25,8 @@ if ( ! function_exists( 'ditarlux_scripts' ) ) {
 		wp_enqueue_style( 'sd-styles', get_template_directory_uri() . '/assets/css/main.min.css', array(), $css_version );
 		
 		$js_version = $theme_version . '.' . filemtime( get_template_directory() . '/assets/js/custom.min.js' );
+		
+		wp_enqueue_script( 'td-map', 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js', array('jquery'), $js_version, true );
 
 		wp_enqueue_script( 'dl-libs', get_template_directory_uri() . '/assets/js/vendor.min.js', array('jquery'), $js_version, true );
 

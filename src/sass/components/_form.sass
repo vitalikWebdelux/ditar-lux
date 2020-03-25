@@ -28,6 +28,7 @@
 		position: absolute
 		width: 100%
 		right: 0
+		text-align: left
 		left: 0
 
 	.wpcf7-form-control-wrap
@@ -42,14 +43,16 @@
 			content: '\e913'
 
 
-[type='text']
-	height: 6rem
+[type='text'], [type='tel']
+	height: 54px
 	border: none
-	border-bottom: 1px solid $dl-dark
-	font-size: 1.6rem
+	background-color: transparent
+	border-bottom: 1px solid $dl-white
+	font-size: 20px
 	width: 100%
-	padding-left: 4rem
 	border-radius: 0
+	transition: border .2s ease-in
+	color: $dl-white
 	&:focus
 		outline: none
-		box-shadow: 0 0 0 1px rgba($dl-blue, .5)
+		border-bottom: 1px solid $dl-red

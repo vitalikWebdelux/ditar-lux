@@ -1,0 +1,81 @@
+#dl-map
+    width: 100%
+    height: 100%
+    z-index: 9
+    +mq(md)
+        height: 300px
+.dl-map-wrap
+    height: 100%
+    width: 100%
+    +mq(md)
+    	height: 300px
+ 
+.dl-contacts
+	.dl-textline
+		font-family: gb
+	&__desk
+		font-family: gb
+
+	&__wrap, &__soc-wrap
+		position: relative
+		
+		+mq(lg)
+			padding: 0 15px
+			flex-basis: calc(100% / 3)
+		+mq(820px)
+			flex-basis: calc(100% / 2)
+		+mq(sm)
+			flex-basis: 300px
+
+
+	&__soc-wrap
+		+mq(md)
+			margin-bottom: 30px
+
+	&__wrap
+		margin-bottom: 30px
+
+	p
+		margin-bottom: 15px
+
+	&__ico
+		padding-right: 3px
+
+		&::before
+			font-size: 25px
+
+
+		&--geo
+			background: url(../img/icons/locale.svg)
+			background-repeat: no-repeat
+			background-size: contain
+			display: inline-block
+			width: 17px
+			height: 23px
+			margin-right: 10px
+			margin-left: 5px
+
+
+
+	&__soc
+
+		&::before
+			font-size: 34px
+			padding-right: 10px
+		&:last-child
+			&::before
+				padding-left: 30px
+
+	&__adress
+		margin-bottom: 0
+
+	&__overlay
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
+		+mq(lg)
+			flex-direction: row
+
+		+mq(sm)
+			display: flex
+			justify-content: center

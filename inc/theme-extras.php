@@ -115,3 +115,4 @@ if ( ! function_exists( 'dl_mime_types' ) ) {
 	}
 	add_filter('upload_mimes', 'dl_mime_types');
 }
+

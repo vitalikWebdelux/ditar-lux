@@ -98,7 +98,7 @@
 
 				<div class="dl-header__btn-wrap">
 					<p class="dl-textline dl-textline--s">Безкоштовна консультація</p>
-					<button class="dl-btn dl-btn--border-white">
+					<button class="dl-btn dl-btn--border-white dl-btn--small">
 						<span class="dl-ico dl-ico--phone dl-header__ico dl-header__ico--phone"></span>
 						Подзвоніть мені
 					</button>
@@ -147,5 +147,3 @@
 		</div>
 	</div>
 </header>
-
-

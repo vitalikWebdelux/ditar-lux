@@ -1,15 +1,4 @@
 .dl-form
-	&__inner
-		height: 681px
-		overflow: hidden
-		width: 100%
-		&::before
-			content: ''
-			background-image: url('../img/form-car.png')
-			background-size: cover
-			background-repeat: no-repeat
-			width: 502px
-			height: 681px
 	&__title
 		color: $dl-white
 		margin-bottom: 50px
@@ -17,17 +6,35 @@
 	&__subtitle
 		margin-bottom: 30px
 
-
+	&__btn-wrap
+		display: flex
+		justify-content: center
 
 	&__list
 		display: flex
 		justify-content: center
-		margin-bottom: 70px
+		padding: 0
+		margin: 0
+		// margin-bottom: 70px
+		margin-bottom: 50px
+		list-style: none
+		+mq(lg)
+			flex-direction: column
+			align-items: center
+			margin-bottom: 0
+
+	label
+		margin-bottom: 0
 
 	&__item
 		max-width: 370px
+		position: relative
+		+mq(lg)
+			margin-bottom: 30px
 		&:first-child
 			margin-right: 60px
+			+mq(lg)
+				margin-right: 0
 	
 		p
 			padding-left: 21px

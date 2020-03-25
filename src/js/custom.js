@@ -159,29 +159,26 @@ var chThemeModule;
 			 * 2. Leaflet map
 			 *-------------------------------------------------------------------------------------------------------------------------------------------
 			 */
+
 			leafletMap: function() {
-				var map_cont = document.getElementById('ch-map');
-
-				if( map_cont ) {
-					var map = L.map('ch-map').setView(new L.LatLng(map_cont.dataset.lat, map_cont.dataset.long), map_cont.dataset.zoom);
-
-					L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-						attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-					}).addTo(map);
-
-					var MapMarker = L.icon({
-						iconUrl: 'https://chopovskyi.dental/wp-content/themes/dental/assets/img/gps.png',
-						iconSize: [75, 106],
-					});
-
-					map.attributionControl.setPrefix(false);
-
-					var marker = new L.marker([map_cont.dataset.lat, map_cont.dataset.long], {
-						icon: MapMarker
-					});
-
-					map.addLayer(marker);
-				}
+				if(!($('body').hasClass('page-id-15'))){
+					var map_cont = $('#dl-map');
+					if( map_cont ) {
+						var map = L.map('dl-map').setView(new L.LatLng(49.285640, 23.460629), 55);
+						L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+							attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+						}).addTo(map);
+						var MapMarker = L.icon({
+							iconUrl: '/wp-content/themes/ditar-lux/assets/img/icons/geo.svg',
+							iconSize: [63, 73],
+						});
+						map.attributionControl.setPrefix(false);
+						var marker = new L.marker([49.285640, 23.460629], {
+							icon: MapMarker
+						});
+						map.addLayer(marker);
+					}
+				} 
 				
 			},
 
