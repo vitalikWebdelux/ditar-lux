@@ -140,7 +140,7 @@ var chThemeModule;
 
 		return {
 			init: function() {
-				this.leafletMap(); 
+				// this.leafletMap(); 
 				this.ajaxHandler();
 				this.sliders();
 			},
