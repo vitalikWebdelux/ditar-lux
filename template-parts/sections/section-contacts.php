@@ -10,6 +10,15 @@
 							Завітайте:
 						</p> 
 						<p class="dl-white dl-contacts__adress">м. Івано-Франківськ вул. Надрічна 56в</p>
+							<div class="dl-contacts__position">
+							<p class="dl-textline dl-textline--x  dl-red">
+								Долучайтесь:
+							</p>
+							<div class="dl-header__icons-wrap">
+								<a href="#" class="dl-ico dl-ico--ig dl-white dl-contacts__soc">Instagram</a>
+								<a href="#" class="dl-ico dl-ico--fb dl-white dl-contacts__soc">Facebook</a>
+							</div>
+						</div>
 					</div>
 
 					<div class="dl-contacts__wrap">
@@ -52,15 +61,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="dl-contacts__soc-wrap dl-contacts__position">
-						<p class="dl-textline dl-textline--x  dl-red">
-							Долучайтесь:
-						</p>
-						<div class="dl-header__icons-wrap">
-							<a href="#" class="dl-ico dl-ico--ig dl-white dl-contacts__soc">Instagram</a>
-							<a href="#" class="dl-ico dl-ico--fb dl-white dl-contacts__soc">Facebook</a>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 			<div class="col-lg-8">
