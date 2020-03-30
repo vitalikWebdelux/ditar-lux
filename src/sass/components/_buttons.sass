@@ -13,11 +13,44 @@
   cursor: pointer
   user-select: none
   cursor: pointer
-  transition: color .25s, box-shadow .25s, background-color .25s
+  transition: color .55s, box-shadow .55s, background-color .55s
   position: relative
-  transition: background .5s, box-shadow .5s
   border-radius: 5px
   font-family: gm
+  z-index: 10
+  overflow: hidden
+  &::after 
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: lighten($dl-red, 10%)
+    border-radius: 5px
+    z-index: -2
+  &::before 
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 0%
+    height: 100%
+    background-color: darken($dl-red, 15%)
+    transition: all .3s
+    border-radius: 5px
+    z-index: -1
+  .dl-ico
+    
+  &:hover
+    color: #fff
+    .dl-ico
+      animation: zcwphone .4s linear
+    &::before
+      width: 120%
+        
+    
+
   +mq(lg)
     font-size: 14px
     // padding: 0 30px
@@ -27,7 +60,7 @@
 
   &--full
     max-width: 100%
-    width: auto
+    width: 100%
 
   &--border-white
     border: 3px solid $dl-white
@@ -40,11 +73,15 @@
     +mq(lg)
       font-size: 22px
       // height: auto
+    &::before, &::after
+      content: none
 
   &--services
     height: 103px
     +mq(lg)
       height: 50px
+    &::before, &::after
+      content: none
 
   &--small
     font-size: 14px
@@ -58,6 +95,9 @@
       font-size: 14px
     +mq(lg)
       font-size: 14px
+    &:hover
+      .dl-ico
+        animation: none
 
   &:focus
     outline: none

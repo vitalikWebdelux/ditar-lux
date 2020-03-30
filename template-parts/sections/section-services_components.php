@@ -2,7 +2,7 @@
 	<div class="container-fluid">
 		<div class="dl-components-services__underground">
 			<h2 class="dl-title dl-title--l dl-components-services__title text-center">
-				Послуги автосервісу
+				Послуги Автосервісу
 			</h2>
 			<div class="dl-components-services__list">
 				<div class="dl-components-services__item">

@@ -7,6 +7,9 @@
     padding-top: 25px
     padding-left: 25px
     padding-right: 25px
+    +mq(sm)
+        padding-right: 15px
+        padding-left: 15px
 
 
 .modal .modal-header 
@@ -27,6 +30,8 @@
     font-family: gb
     text-transform: uppercase
     text-align: center
+    +mq(sm)
+        font-size: 22px
 
 
 .modal .modal-title span 
@@ -52,7 +57,11 @@
     width: 34px
     top: -25px
     padding: 0
-
+    +mq(md)
+        top: -35px
+        right: auto
+        left: 50%
+        transform: translate(-50%)
 
 .modal .close:focus 
     outline: 0

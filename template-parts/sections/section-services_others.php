@@ -11,9 +11,16 @@
 					<div class="dl-service__inner">
 						<img src="<?php echo SD_THEME_IMAGE_URI; ?>/otherservicesto.jpg" alt="">
 						<div class="dl-service__btn-wrap">
-							<a href="#" class="dl-btn dl-btn--border-white dl-service__btn">
+						<?php if(is_page('20')){ ?>
+							<a href="https://<?php echo SD_THEME_SLUG; ?>/avtoservis" class="dl-btn dl-btn--border-white dl-service__btn">
 								Автосервіс
 							</a>
+						<?php } elseif (is_page('22')) { ?>
+							<a href="https://<?php echo SD_THEME_SLUG; ?>/auto-with-usa" class="dl-btn dl-btn--border-white dl-service__btn">
+								Авто з США
+							</a>
+						<?php } ?>
+
 						</div>
 					</div>
 				</div>
