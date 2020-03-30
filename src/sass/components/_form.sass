@@ -1,14 +1,17 @@
-.ch-form
-	
-	&--black
-		.form-group
-			[type='text']
-				background: #0f0f10
-				color: $dl-white
-				border-bottom: 1px solid #363636
-
-			&::before
-				color: $dl-blue
+[type='text'], [type='tel']
+	height: 54px
+	border: none
+	background-color: transparent
+	font-size: 20px
+	width: 100%
+	border-radius: 0
+	font-family: gm
+	transition: border .2s ease-in
+	&:focus
+		outline: none
+		border-bottom: 2px solid $dl-red
+[type='tel']
+	font-family: gb
 .form-group
 	position: relative
 	br
@@ -42,17 +45,11 @@
 		&::before
 			content: '\e913'
 
+	&__dark
+		border-bottom: 2px solid $dl-dark
 
-[type='text'], [type='tel']
-	height: 54px
-	border: none
-	background-color: transparent
-	border-bottom: 1px solid $dl-white
-	font-size: 20px
-	width: 100%
-	border-radius: 0
-	transition: border .2s ease-in
-	color: $dl-white
-	&:focus
-		outline: none
-		border-bottom: 1px solid $dl-red
+	&__white
+		border-bottom: 2px solid $dl-white
+
+
+

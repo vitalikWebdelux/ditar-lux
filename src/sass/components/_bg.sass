@@ -10,7 +10,43 @@
 		background-image: url(../img/select3.png)
 	&--service
 		background-image: url(../img/selectbg.png)
+		background-position-x: center
+		+mq(md)
+			background-position: top center
+
 	&--auto_usa
 		background-image: url(../img/bg-usa.png)
+		+mq(1900px)
+			background-position-y: 57px
+		+mq(1700px)
+			background-position-x: right
+		+mq(1380px)
+			background-position-x: -520px
+		+mq(lg)
+			background-position: 0 0
+			// background-position: -578px
+
 	&--form
 		background-image: url(../img/bg-form.jpg)
+	&--autoservice
+		background-image: url(../img/bg-autoservice.png)
+
+		+mq(xl)
+			background-position-x: center
+
+	&--autoservice-form
+		background-image: url(../img/bg-form-top.png)
+		background-size: contain
+		+mq(md)
+			background-image: none
+
+	&--autoservice-form-inner
+		background-image: url(../img/bg-form-inner.png)
+		box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.14)
+		padding: 50px 0
+		+mq(xl)
+			padding-left: 15px
+			padding-right: 15px
+
+	&--white-blue
+		background-color: $dl-white_blue

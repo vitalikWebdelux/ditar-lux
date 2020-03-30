@@ -6,8 +6,8 @@
 		<div class="row no-gutters">
 			<div class="col-lg-12">
 				<div class="dl-form__overlay">
-
-					<h2 class="dl-title dl-title--l dl-form__title text-center">Не гайте часу, отримайте 3 варіанти автомобілів у 3-x цінових категоріях  <span>абсолютно безкоштовно!</span></h2>
+					<!-- dl-form__title -->
+					<h2 class="dl-title dl-title--l dl-form__title text-center dl-white"><span>Не гайте часу, отримайте 3 варіанти автомобілів у 3-x цінових категоріях  <span class="dl-red">абсолютно безкоштовно!</span></span></h2>
 
 					<p class="dl-textline dl-textline--x dl-form__subtitle text-center">Залишайте заявку і отримайте:</p>
 

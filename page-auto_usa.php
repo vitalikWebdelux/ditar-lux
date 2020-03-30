@@ -1,8 +1,10 @@
 <?php /*Template Name: Auto with USA */ get_header();
-	get_template_part( 'template-parts/sections/section', 'hero_auto_usa' );
+	get_template_part( 'template-parts/sections/hero/section', 'hero_auto_usa' );
 	get_template_part( 'template-parts/sections/section', 'scheme' );
 	get_template_part( 'template-parts/sections/section', 'form' );
+	echo '<div class="bg--white-blue">';
 	get_template_part( 'template-parts/sections/section', 'features' );
 	get_template_part( 'template-parts/sections/section', 'services_others' );
+	echo '</div>';
 	get_template_part( 'template-parts/sections/section', 'contacts' );
-get_footer(); ?>
+get_footer();

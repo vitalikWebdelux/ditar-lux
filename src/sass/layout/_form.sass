@@ -1,7 +1,14 @@
 .dl-form
+
 	&__title
-		color: $dl-white
 		margin-bottom: 50px
+		display: flex
+		justify-content: center
+		
+		width: 100%	
+		span
+			// max-width: 770px
+			max-width: 914px
 
 	&__subtitle
 		margin-bottom: 30px
@@ -48,3 +55,8 @@
 				left: 0
 				top: 4px
 				background-color: $dl-red
+.dl-form, .dl-form_autoservice
+	button
+		+mq(lg)
+			width: 100%
+			max-width: 370px

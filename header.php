@@ -21,7 +21,7 @@
 <body <?php body_class(); ?>>
 	<main class="dl-main">
 <?php if(is_page('15')) : ?>
-	<div class="dl-service-wrap bg bg--service">
+	<div class="dl-service-wrap ">
 <?php endif; ?>
 
 <header class="dl-header">
@@ -86,7 +86,7 @@
 										</g>
 										<g>
 										</g>
-										<g>
+										<g> 
 										</g>
 							</svg>
 						</a>
@@ -97,8 +97,15 @@
 				</div>
 
 				<div class="dl-header__btn-wrap">
-					<p class="dl-textline dl-textline--s">Безкоштовна консультація</p>
-					<button class="dl-btn dl-btn--border-white dl-btn--small">
+					<p class="dl-textline dl-textline--s d-none d-sm-block">Безкоштовна консультація</p>
+					<?php //if(!empty($phone_1)) : ?>
+					<p class="dl-textline dl-textline--s d-sm-none d-block">
+						<a class="dl-textline dl-textline--s dl-header__phone" href="tel:380951117135<?php //echo preg_replace('/\s+/', '', esc_html($phone)); ?>">
+							<?php //echo esc_html($phone_2); ?>+38 (095) 111-71-35 </a>
+					</p>
+					<?php //endif; ?>
+					
+					<button class="dl-btn dl-btn--small"  data-target="#modal-getInTouch" data-toggle="modal">
 						<span class="dl-ico dl-ico--phone dl-header__ico dl-header__ico--phone"></span>
 						Подзвоніть мені
 					</button>
@@ -109,6 +116,8 @@
 					<div class="dl-header__icons-wrap">
 						<a href="#" class="dl-ico dl-ico--tg dl-header__ico dl-header__ico--tg"></a>
 						<a href="#" class="dl-ico dl-ico--vb dl-header__ico dl-header__ico--vb"></a>
+						<a href="#" class="dl-ico dl-ico--fb dl-header__ico dl-header__ico--fb"></a>
+						<a href="#" class="dl-ico dl-ico--ig dl-header__ico dl-header__ico--ig"></a>
 					</div>
 				</div>
 
@@ -117,13 +126,13 @@
 					<div class="dl-header__phones-wrap ">
 						<?php //if(!empty($phone_1)) : ?>
 							<a href="tel:380667377273<?php// echo preg_replace('/\s+/', '', esc_html($phone)); ?>" class="dl-ico dl-ico--smartfon dl-header__ico dl-header__ico--smartfon"></a>
-							<a class="dl-textline dl-textline--s dl-header__phone" href="tel:380667377273<?php// echo preg_replace('/\s+/', '', esc_html($phone)); ?>">
-								<?php //echo esc_html($phone_1); ?>+38 (066) 737-72-73
+							<a class="dl-textline dl-textline--s dl-header__phone" href="tel:380951117135<?php// echo preg_replace('/\s+/', '', esc_html($phone)); ?>">
+								<?php //echo esc_html($phone_1); ?>+38 (095) 111-71-35 
 							</a>
 						<?php //endif; ?>
 						<?php //if(!empty($phone_2)) : ?>
-							<a class="dl-textline dl-textline--s dl-header__phone" href="tel:380980350345<?php //echo preg_replace('/\s+/', '', esc_html($phone)); ?>">
-								<?php //echo esc_html($phone_2); ?>+38 (098) 035-03-45
+							<a class="dl-textline dl-textline--s dl-header__phone" href="tel:380951118386<?php //echo preg_replace('/\s+/', '', esc_html($phone)); ?>">
+								<?php //echo esc_html($phone_2); ?>+38 (095) 111-83-86
 							</a>
 						<?php // endif; ?>
 					</div>

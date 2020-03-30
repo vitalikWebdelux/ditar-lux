@@ -8,6 +8,8 @@
 	height: 88px
 	align-items: center
 	background-color: $dl-white
+	+mq(1025px)
+		height: 50px
 
 
 .menu-item
@@ -17,7 +19,6 @@
 	align-items: center
 	border-top: 0
 	height: 100%
-	padding-top: 5px
 	+mq(1500px)
 		border: 1px solid #E5E5E5
 		border-top: 0
@@ -38,6 +39,10 @@
 
 	font-size: 24px
 	font-family: gb
+	+mq(1025px)
+		font-size: 18px
+	+mq(470px)
+		font-size: 15px
 
 	&:nth-child(2)
 		position: relative

@@ -1,12 +1,14 @@
 .dl-hero
-	height: calc(100vh - 129px - 83px)
-	@media screen and (max-height: 900px)
-		
-		height: auto
+	$this: &
+	height: 830px
+	+mq(lg)
+		height: calc(100vh - 100px)
 
-	+mq(md)
-		
-		// padding: 50px 0
+	&--auto_usa
+		#{$this}__btn-wrap
+			button
+				width: 379px
+
 .dl-form
 	position: relative
 	&__auto-img-wrap
@@ -17,7 +19,7 @@
 		position: absolute
 		bottom: -233px
 		left: 0
-		img
+		img 
 			position: absolute
 			bottom: 0
 			left: 0
@@ -30,30 +32,56 @@
 				bottom: 54px
 			+mq(sm)
 				max-width: 295px
-		// &::before
-		// 	content: ''
-		// 	position: absolute
-		// 	left: 0
-		// 	bottom: 0
-		// 	background-image: url(../img/form-car.png)
-		// 	background-size: cover
-		// 	background-repeat: no-repeat
-
-	.container-fluid
-		max-width: 947px
-
 	padding-top: 250px
 	padding-bottom: 250px - 44px
+	+mq(lg)
+		padding-top: 200px
+
+.dl-form_autoservice
+	padding-top: 250px
+	+mq(lg)
+		padding-top: 230px
+
 .dl-scheme
 	position: relative
 	z-index: 1
+
 .dl-features
 	padding-top: 100px
+	padding-top: 129px
+	&--usa
+		+mq(lg)
+			padding-top: 50px
+
 
 .dl-othrers-services
+	// padding-top: 100px
+	padding-top: 111px
+	// padding-bottom: 100px
+	padding-bottom: 73px
+	position: relative
+	+mq(lg)
+		padding-top: 20px
+	&::before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 270px
+		background-color: $dl-white
+ 
+.dl-components-services
 	padding-top: 100px
-	padding-bottom: 100px
+	margin-bottom: -150px
+	position: relative
+	z-index: 1
+	.container-fluid
+		max-width: 1590px
+	+mq(lg)
+		padding-top: 55px
+
 
 .dl-contacts
-	padding: 50px 0
+	padding: 68px 0
 	background: linear-gradient(60.83deg, #070606 21.52%, #4C5155 98.54%, #5F5656 103.87%)

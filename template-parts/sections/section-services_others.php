@@ -7,22 +7,26 @@
 				</h2>
 			</div>
 			<div class="col-lg-6">
-				<div class="dl-service__overlay mt-md-15">
-					<img src="<?php echo SD_THEME_IMAGE_URI; ?>/otherservicesto.jpg" alt="">
-					<div class="dl-service__btn-wrap">
-						<a href="https://ditar-lux/main/avtoservis/" class="dl-btn dl-btn--border-white dl-service__btn">
-							Автосервіс
-						</a>
+				<div class="dl-service__overlay">
+					<div class="dl-service__inner">
+						<img src="<?php echo SD_THEME_IMAGE_URI; ?>/otherservicesto.jpg" alt="">
+						<div class="dl-service__btn-wrap">
+							<a href="#" class="dl-btn dl-btn--border-white dl-service__btn">
+								Автосервіс
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-6">
 				<div class="dl-service__overlay mt-lg-30 mt-md-15">
-					<img src="<?php echo SD_THEME_IMAGE_URI; ?>/otherautoservice.jpg" alt="">
-					<div class="dl-service__btn-wrap">
-						<a href="https://ditar-lux/main/avtoservis" class="dl-btn dl-btn--border-white dl-service__btn">
-							Авторозбір
-						</a>
+					<div class="dl-service__inner">
+						<img src="<?php echo SD_THEME_IMAGE_URI; ?>/otherautoservice.jpg" alt="">
+						<div class="dl-service__btn-wrap">
+							<a href="https://autogroup.org.ua" class="dl-btn dl-btn--border-white dl-service__btn">
+								Авторозбір
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

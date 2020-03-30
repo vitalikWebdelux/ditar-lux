@@ -1,6 +1,6 @@
 .dl-header
 	height: 129px 
-	display: none	
+
 	&__overlay
 		background-color: $dl-dark
 
@@ -9,6 +9,9 @@
 		position: relative
 		z-index: 10
 		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.08)
+		.container
+			+mq(470px)
+				padding: 0
 
 
 	&__inner
@@ -16,25 +19,40 @@
 		justify-content: space-between
 		align-items: center
 
+
 	p
 		text-transform: uppercase
 		margin-bottom: 5px
 		text-align: center
+		+mq(sm)
+			text-transform: none
 
 	button
 		font-size: 14px
-		width: auto
+		width: 100%
 		font-style: normal
 		height: 44px
 		text-transform: uppercase
 		padding-left: 55px
-		padding-right: 13px
+		padding-right: 20px
+		+mq(360px)
+			padding-right: 13px
+			padding-left: 43px
 
-	&__phone-wrap 
+	&__soc-wrap
+		+mq(670px)
+			display: none
+
+
+	&__phone-wrap
+		+mq(1110px)
+			display: none
+
 
 	&__phones-wrap
 		position: relative
 		padding-left: 52px
+
 
 	&__phone
 		color: $dl-white
@@ -54,10 +72,19 @@
 		svg
 			background-color: #fff
 			height: 129px
+			width: 100px
+			+mq(sm)
+				height: 119px
+				width: 95px
+			+mq(360px)
+				width: 81px
+				height: 115px
 
 	&__logo-description
 		padding-left: 20px
 		margin-bottom: 0
+		+mq(850px)
+			display: none
 		
 	&__ico
 		border-radius: 5px
@@ -67,12 +94,9 @@
 
 		&--smartfon
 			position: absolute
-			left: 0
+			left: 35px
 			top: 50%
 			transform: translateY(-50%)
-			height: 44px
-			width: 41px
-			background-color: $dl-red
 
 			&::before
 				font-size: 32px
@@ -82,12 +106,13 @@
 				left: 50%
 				transform: translate(-50%, -50%)
 
-		&--tg
+		&--tg, &--fb, &--vb, &--ig
 			height: 44px
 			width: 41px
 			background-color: $dl-red
-			margin-right: 42px
+			margin-right: 20px
 			position: relative
+			border-radius: 2px
 			+mq(xl)
 				margin-right: 20px
 			&::before
@@ -96,23 +121,15 @@
 				top: 50%
 				left: 50%
 				transform: translate(-50%, -50%)
-
-		&--vb
-			height: 44px
-			width: 41px
-			background-color: $dl-red
-			position: relative
-			&::before
-				position: absolute
-				font-size: 30px
-				top: 50%
-				left: 50%
-				transform: translate(-50%, -50%)
+		&--ig
+			margin-right: 0
 
 		&--phone
 			position: absolute
 			top: 50%
 			transform: translateY(-50%)
-			left: 13px
+			left: 20px
 			&::before
-				font-size: 20px
+				font-size: 25px
+			+mq(360px)
+				left: 10px

@@ -1,7 +1,6 @@
 html
-  font-size: 10px
-  // font-family: $main-font
   min-width: 320px
+  font-size: 10px
 h1,
 h2,
 h3,
@@ -50,10 +49,15 @@ span.wpcf7-not-valid-tip
   +mq(md)
     margin-top: 15px
 
+.mb-30
+  margin-bottom: 30px
+.mb-15
+  margin-bottom: 15px
 body
+  font-size: 16px
   .container
     @media (min-width: 1200px)
-      max-width: 117rem
+      max-width: 1170px
     @media (max-width: 1200px)
       max-width: 100%
 
@@ -65,13 +69,8 @@ body
   background: $dl-blue
 ::-webkit-scrollbar-thumb:hover
   background: lighten($dl-blue, 5%)
-
-body.modal-open > :not(.modal):not(.cursor)
-  transition: 1s
-  filter: blur(4px)
-
-// .dl-main
-
+label
+  margin-bottom: 0
 img
   max-width: 100%
   height: auto

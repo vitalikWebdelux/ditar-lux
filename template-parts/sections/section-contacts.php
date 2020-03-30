@@ -9,7 +9,7 @@
 							<span class="dl-contacts__ico dl-contacts__ico--geo dl-white"></span>
 							Завітайте:
 						</p> 
-						<p class="dl-white dl-contacts__adress">м. Івано-Франківськ вул.Надрічна 56в</p>
+						<p class="dl-white dl-contacts__adress">м. Івано-Франківськ вул. Надрічна 56в</p>
 					</div>
 
 					<div class="dl-contacts__wrap">
@@ -28,14 +28,13 @@
 							<a href="#">+38 (095) 111-83-86 інф. підтримка</a>
 						</p>
 						<div class="dl-contacts__btn-wrap">
-							<button class="dl-btn dl-btn--border-white dl-btn--small">
+							<button class="dl-btn dl-btn--border-white dl-btn--small" data-target="#modal-getInTouch" data-toggle="modal">
 								<span class="dl-ico dl-ico--phone dl-header__ico dl-header__ico--phone"></span>
 								Подзвоніть мені
 							</button>
 						</div>
 					</div>
-
-					<div class="dl-contacts__soc-wrap">
+					<div class="dl-contacts__wrap dl-contacts__soc-wrap ">
 						<p class="dl-textline dl-textline--x  dl-red">
 							Пишіть:
 						</p>
@@ -43,11 +42,27 @@
 							<a href="#" class="dl-ico dl-ico--tg dl-white dl-contacts__soc">Telegram</a>
 							<a href="#" class="dl-ico dl-ico--vb dl-white dl-contacts__soc">Viber</a>
 						</div>
+						<div class=" d-block d-lg-none dl-contacts__margin-top">
+							<p class="dl-textline dl-textline--x  dl-red">
+								Долучайтесь:
+							</p>
+							<div class="dl-header__icons-wrap"> 
+								<a href="#" class="dl-ico dl-ico--ig dl-white dl-contacts__soc">Instagram</a>
+								<a href="#" class="dl-ico dl-ico--fb dl-white dl-contacts__soc">Facebook</a>
+							</div>
+						</div>
+					</div>
+					<div class="dl-contacts__soc-wrap dl-contacts__position">
+						<p class="dl-textline dl-textline--x  dl-red">
+							Долучайтесь:
+						</p>
+						<div class="dl-header__icons-wrap">
+							<a href="#" class="dl-ico dl-ico--ig dl-white dl-contacts__soc">Instagram</a>
+							<a href="#" class="dl-ico dl-ico--fb dl-white dl-contacts__soc">Facebook</a>
+						</div>
 					</div>
 				</div>
-
 			</div>
-
 			<div class="col-lg-8">
 				<div class="dl-map-wrap">
                     <div id="dl-map"></div>

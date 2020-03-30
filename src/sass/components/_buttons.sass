@@ -10,15 +10,20 @@
   border: none
   text-transform: uppercase
   white-space: nowrap
+  cursor: pointer
   user-select: none
   cursor: pointer
   transition: color .25s, box-shadow .25s, background-color .25s
   position: relative
   transition: background .5s, box-shadow .5s
   border-radius: 5px
+  font-family: gm
   +mq(lg)
     font-size: 14px
-    padding: 0 30px
+    // padding: 0 30px
+
+  +mq(470px)
+    white-space: normal
 
   &--full
     max-width: 100%
@@ -29,8 +34,12 @@
     background-color: transparent
     text-transform: none
     font-size: 36px
-    +mq(lg)
+    font-family: g
+    +mq(xl)
       font-size: 27px
+    +mq(lg)
+      font-size: 22px
+      // height: auto
 
   &--services
     height: 103px
@@ -40,15 +49,15 @@
   &--small
     font-size: 14px
     width: auto
-    font-style: normal
+    font-family: g
     height: 44px
     text-transform: uppercase
     padding-left: 55px
     padding-right: 13px
+    +mq(xl)
+      font-size: 14px
     +mq(lg)
       font-size: 14px
-  
-
 
   &:focus
     outline: none

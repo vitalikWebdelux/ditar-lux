@@ -140,8 +140,8 @@ var chThemeModule;
 
 		return {
 			init: function() {
-				// this.leafletMap(); 
-				this.ajaxHandler();
+				this.leafletMap(); 
+				this.cf7();
 				this.sliders();
 			},
 
@@ -164,16 +164,16 @@ var chThemeModule;
 				if(!($('body').hasClass('page-id-15'))){
 					var map_cont = $('#dl-map');
 					if( map_cont ) {
-						var map = L.map('dl-map').setView(new L.LatLng(49.285640, 23.460629), 55);
+						var map = L.map('dl-map').setView(new L.LatLng(48.941519, 24.715997), 14);
 						L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 							attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 						}).addTo(map);
 						var MapMarker = L.icon({
 							iconUrl: '/wp-content/themes/ditar-lux/assets/img/icons/geo.svg',
-							iconSize: [63, 73],
+							iconSize: [52, 42],
 						});
 						map.attributionControl.setPrefix(false);
-						var marker = new L.marker([49.285640, 23.460629], {
+						var marker = new L.marker([48.94151, 24.715997], {
 							icon: MapMarker
 						});
 						map.addLayer(marker);
@@ -182,26 +182,26 @@ var chThemeModule;
 				
 			},
 
-			ajaxHandler: function() {
-		        $('body').on('submit', 'form', function (e) {
-			        e.preventDefault();
-			        var formData = $(this).serializeArray();
-			        $.ajax({
-			            type: 'POST',
-			            url: "/wp-admin/admin-ajax.php",
-			            data: formData,
-			            beforeSend: function beforeSend() {
-			           
-			            },
-				            success: function success(data) {
-					              console.log('send')
-				            },
-				            error: function error(data) {
-				              console.log('error: ' + formData);
-				            }
-			          	});
-		          	return false;
-		        });
+			cf7: function() {
+		        $("input[type='tel']").inputmask({
+                    mask: "(099) 999-99-99"
+                }),
+                $('input[type="tel"]').on("change keyup keydown", function() {
+                    var e = $(this).val();
+                    "0" == ("" + e)[2] && ($(this).val(" "),
+                    $(this).blur().focus()),
+                    $('button[type="submit"]').attr("disabled", "disabled"),
+                    new RegExp("_$").test(e) ? $(this).addClass("error-phone") : ($(this).removeClass("error-phone"),
+                    $('button[type="submit"]').removeAttr("disabled"),
+                    $('button[type="submit"]').removeAttr("disabled").find(".shine-button__el").addClass("animate"))
+                }),
+                $(".wpcf7").on("wpcf7mailsent", function(e) {
+                    $("#modal-thanks").modal("show");
+                    $("#modal-getInTouch").modal("hide");
+                    setTimeout(function() {
+                        $("#modal-thanks").modal("hide");
+                    }, 3400)
+                })
       		},
 
       		sliders: function(){

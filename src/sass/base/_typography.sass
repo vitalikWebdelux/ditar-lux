@@ -1,35 +1,19 @@
 body
 	font-family: g, sans-serif
-	font-size: 16px
 	min-width: 320px
+	font-size: 16px
 
-// .dl-title
-// 	font-size: 48px
-// 	font-family: gb, sans-serif
-// 	line-height: 1
-
-// 	&--white
-// 		color: $dl-white
-
-// 	+mq(xl)
-// 		font-size: 4.6rem
-	
-// 	+mq(sm)
-// 		font -size: 3.8rem
-// 	+mq(413px)
-// 		font-size: 3.6rem
 .dl-title
 	line-height: 1
 	font-family: gb
-	+mq(sm)
-		font-size: 26px
-	span
-		color: $dl-red
+
 	&--x
 		font-size: 64px
 		font-family: geb
 		+mq(xl)
-			font-size: 26px
+			font-size: 50px
+		+mq(lg)
+			font-size: 32px
 
 	&--h
 		font-size: 48px
@@ -37,6 +21,8 @@ body
 	&--l
 		font-size: 36px
 		line-height: 1.2
+		+mq(sm)
+			font-size: 27px
 
 	&--s
 		font-size: 20px
@@ -63,22 +49,29 @@ body
 	&--x
 		font-size: 36px
 		font-family: gm
+		+mq(lg)
+			font-size: 27px
 
 	&--l
 		font-size: 18px
 	&--m
-		
-		font-size: 16px
+		font-family: gm
 
 	&--s
 .dl-textline
 	&--x
 		font-size: 24px
+		font-family: gb
+		+mq(sm)
+			font-size: 22px
 	&--s
 		font-size: 14px
 	
 .dl-red
 	color: $dl-red
-
+.dl-orange
+	color: $dl-orange
 .dl-white
 	color: $dl-white
+.dl-dark
+	color: $dl-dark

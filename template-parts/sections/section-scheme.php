@@ -21,27 +21,27 @@
 								<div class="dl-scheme__item dl-scheme__item--2 dl-ico dl-ico--arrow_xl ">
 									<span class="dl-ico dl-ico--calc dl-scheme__ico dl-red text-center"></span>
 									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
-										Підбір авто
+										Калькуляція
 									</h3>
-									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Ми обирємо авто виходячи з вашого бюджету та побажань</span></p>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Ще до купівлі авто у Вас буде розрахунок на вибраний автомобіль</span></p>
 								</div>
 							</div>
 							<div class="col-lg-3 col-sm-6">
 								<div class="dl-scheme__item dl-ico dl-ico--arrow_xl">
 									<span class="dl-ico dl-ico--progres dl-scheme__ico dl-red text-center"></span>
 									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
-										Підбір авто
+										Аукціон
 									</h3>
-									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Ми обирємо авто виходячи з вашого бюджету та побажань</span></p>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Участь в оналайн торгах та купівля авто відповідно до замовлення</span></p>
 								</div>
 							</div>
 							<div class="col-lg-3 col-sm-6">
 								<div class="dl-scheme__item">
 									<span class="dl-ico dl-ico--wallet dl-scheme__ico dl-red text-center"></span>
 									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
-										Підбір авто
+										Оплата
 									</h3>
-									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Ми обирємо авто виходячи з вашого бюджету та побажань</span></p>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Платіжки проводяться SWIFT переводом через Банк та гарантує прозорість</span></p>
 								</div>
 							</div>
 						</div>
@@ -52,9 +52,9 @@
 								<div class="dl-scheme__item dl-ico dl-ico--arrow_xl">
 									<span class="dl-ico dl-ico--delivery dl-scheme__ico dl-red dl-scheme__delivery-ico text-center"></span>
 									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
-										Підбір авто
+										Доставка
 									</h3>
-									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Ми обирємо авто виходячи з вашого бюджету та побажань</span></p>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Авто доставляється Кораблем в контейнерах та прибуває в Україну</span></p>
 								</div>
 							</div>
 
@@ -62,9 +62,9 @@
 								<div class="dl-scheme__item dl-scheme__item--2 dl-ico dl-ico--arrow_xl">
 									<span class="dl-ico dl-ico--clearance dl-scheme__ico dl-red text-center"></span>
 									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
-										Підбір авто
+										Розмитнення
 									</h3>
-									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Ми обирємо авто виходячи з вашого бюджету та побажань</span></p>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Відбувається розмитнення авто за зниженими тарифами</span></p>
 								</div>
 							</div>
 
@@ -72,9 +72,9 @@
 								<div class="dl-scheme__item dl-ico dl-ico--arrow_xl">
 									<span class="dl-ico dl-ico--repair dl-scheme__ico dl-red text-center"></span>
 									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
-										Підбір авто
+										Ремонт
 									</h3>
-									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Ми обирємо авто виходячи з вашого бюджету та побажань</span></p>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Проводиться ремонт автомобіля</span></p>
 								</div>
 							</div>
 
@@ -82,15 +82,16 @@
 								<div class="dl-scheme__item">
 									<span class="dl-ico dl-ico--sertif dl-scheme__ico dl-red text-center"></span>
 									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
-										Підбір авто
+										Сертифікація
 									</h3>
-									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Ми обирємо авто виходячи з вашого бюджету та побажань</span></p>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Допомога та супровід в сертифікації та реєстрації авто</span></p>
 								</div>
 							</div>
 						</div>
 					</div>
 					
 				</div>
+				<div id="dl-scheme__box-id" class="d-none"></div>
 			</div>
 		</div>
 	</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
