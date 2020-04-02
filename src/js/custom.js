@@ -169,7 +169,7 @@ var chThemeModule;
 							attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 						}).addTo(map);
 						var MapMarker = L.icon({
-							iconUrl: '/wp-content/themes/ditar-lux/assets/img/icons/geo.svg',
+							iconUrl: '/ditar-lux/wp-content/themes/ditar-lux/assets/img/icons/geo.svg',
 							iconSize: [52, 42],
 						});
 						map.attributionControl.setPrefix(false);
@@ -196,8 +196,9 @@ var chThemeModule;
                     $('button[type="submit"]').removeAttr("disabled").find(".shine-button__el").addClass("animate"))
                 }),
                 $(".wpcf7").on("wpcf7mailsent", function(e) {
+                	$(".modal").modal("hide");
                     $("#modal-thanks").modal("show");
-                    $("#modal-getInTouch").modal("hide");
+                    
                     setTimeout(function() {
                         $("#modal-thanks").modal("hide");
                     }, 3400)
@@ -212,7 +213,7 @@ var chThemeModule;
 						nextArrow: "<button class=\"dl-hero__slider-next dl-ico dl-ico--arrow slick-arrow--next\"></button>",
 						prevArrow: "<button class=\"dl-hero__slider-prev dl-ico dl-ico--arrow slick-arrow--prev\"></button>",
 						dots: true,
-						autoplay: true,
+						// autoplay: true,
   						autoplaySpeed: 5000,
   						dotsClass: 'red-dots',
 						// responsive: [{

@@ -41,7 +41,6 @@ $ditarlux_includes = array(
 	'/theme-hooks.php',                           // Custom hooks.
 	// '/send.php',                           // Custom hooks.v
 	'/theme-extras.php',                          // Custom functions that act independently of the theme templates.
-	'/tgm/khl-register-plugins.php',        // Register Plugins.
 	'/classes/class-carbon-fields.php',  // Carbon fields
 	'/classes/class-nav-walker.php',
 	'/classes/class-seo-walker.php',

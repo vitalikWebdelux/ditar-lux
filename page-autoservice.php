@@ -9,4 +9,5 @@
 	echo '</div>';
 
 	get_template_part( 'template-parts/sections/section', 'contacts' );
+	get_template_part( 'template-parts/modals/modal', 'tehservice' );
 get_footer();                                                                       

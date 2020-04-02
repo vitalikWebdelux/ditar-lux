@@ -24,24 +24,30 @@
 			flex-basis: calc(100% / 3)
 		+mq(935px)
 			flex-basis: calc(100% / 2)
-		+mq(sm)
+		+mq(640px)
 			flex-basis: 300px
 
 
 
 
-	&__soc-wrap
-		+mq(md)
-			margin-bottom: 30px
+
 
 	&__wrap
 		margin-bottom: 30px 
+		+mq(lg)
+			margin-bottom: 0
+		+mq(640px)
+			margin-bottom: 30px
+	&__soc-wrap
+		+mq(lg)
+			margin-bottom: 30px
 
 	&__margin-top
 		margin-top: 30px
 		+mq(935px)
-			display: none !important
-
+			display: none
+		+mq(635px)
+			display: block
 	p
 		margin-bottom: 15px
 
@@ -77,10 +83,11 @@
 				padding-left: 30px
 
 	&__position
-		+mq(lg)
-			display: none
+		display: none
 		+mq(935px)
 			display: block
+		+mq(640px)
+			display: none
 
 
 	&__adress

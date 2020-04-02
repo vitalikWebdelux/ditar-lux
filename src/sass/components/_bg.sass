@@ -1,6 +1,8 @@
 .bg
 	background-repeat: no-repeat
 	background-size: cover
+	+mq(md)
+		background-position: center
 
 	&--s-1
 		background-image: url(../img/select1.png)
@@ -18,10 +20,10 @@
 			background-position: top center
 
 	&--remont
-		background-image: url(../img/bg-remont.jpg)
+		background-image: url(../img/bg-remont.png)
 
 	&--diagnostic
-		background-image: url(../img/bg-diagnostick.jpg)
+		background-image: url(../img/bg-diagnostick.png)
 
 	&--auto_usa
 		background-image: url(../img/bg-usa.png)
@@ -35,16 +37,20 @@
 			background-position: 0 0
 
 	&--delivery
-		background-image: url(../img/bg-delivery.jpg)
+		background-image: url(../img/bg-delivery.png)
 
 	&--sertif
-		background-image: url(../img/bg-sertif.jpg)
+		background-image: url(../img/bg-sertif.png)
+		background-position-y: 66px
+		+mq(lg)
+			background-position-y: 0
+			background-position-x: right
 
 	&--form
 		background-image: url(../img/bg-form.jpg)
+
 	&--autoservice
 		background-image: url(../img/bg-autoservice.png)
-
 		+mq(xl)
 			background-position-x: center
 

@@ -40,6 +40,34 @@
     transition: all .3s
     border-radius: 5px
     z-index: -1
+
+  &__animate
+    position: absolute
+    width: 100%
+    &::after
+      margin-left: -60px
+      content: ''
+      width: 30px
+      height: 300px
+      background: #fff
+      animation-delay: .05s
+      position: absolute
+      left: -130px
+      top: -130px
+      top-animation-timing-function: ease-in-out
+      transition: all .3s
+      animation-name: slideme
+      animation-duration: 2.5s
+      animation-iteration-count: infinite
+      transform: rotate(45deg)
+  &--effect
+    top-animation-timing-function: ease-in-out
+    transition: all .3s
+    animation-name: jittery
+    animation-delay: .05s
+    animation-duration: 2.5s
+    animation-iteration-count: infinite
+    
   .dl-ico
     
   &:hover
@@ -73,6 +101,9 @@
     +mq(lg)
       font-size: 22px
       // height: auto
+    &:hover
+      .dl-ico
+        animation: none
     &::before, &::after
       content: none
 
@@ -95,9 +126,7 @@
       font-size: 14px
     +mq(lg)
       font-size: 14px
-    &:hover
-      .dl-ico
-        animation: none
+
 
   &:focus
     outline: none

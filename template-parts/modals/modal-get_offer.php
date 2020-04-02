@@ -2,7 +2,7 @@
   <div class="modal-dialog modal-dialog-centered " role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title dl-white">Залишайте заявку <br> <span>і підберіть авто</span></div>
+        <div class="modal-title dl-white">Залишайте заявку <br> <span>і ми допоможемо підібрати <span class="text-uppercase">В</span>ам авто</span></div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>

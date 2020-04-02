@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="dl-form__overlay bg bg--autoservice-form-inner">
-					<h2 class="dl-title dl-title--l dl-form__title text-center dl-dark"><span>Не гайте часу, <span class="dl-red">забронюйте свою годину</span> в автосервісі абсолютно безкоштовно</span></h2>
+					<h2 class="dl-title dl-title--l dl-form__title text-center dl-dark"><span>Не гайте часу, <span class="dl-red">забронюйте свою годину</span> в автосервісі <b>абсолютно безкоштовно!</b></span></h2>
 					<p class="dl-textline dl-textline--x dl-form__subtitle  dl-dark text-center">Залишайте заявку і отримайте:</p>
 
 					<ul class="dl-form__list">

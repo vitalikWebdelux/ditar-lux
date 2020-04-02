@@ -8,6 +8,13 @@
  *
  * @package ditarlux
  */
+$phone1 = carbon_get_theme_option('dl_phone', 'text');
+$phone2 = carbon_get_theme_option('dl_phone_2', 'text');
+
+$ig = carbon_get_theme_option('dl_instagram', 'text');
+$fb = carbon_get_theme_option('dl_facebook', 'text');
+$vb = carbon_get_theme_option('dl_viber', 'text');
+$tg = carbon_get_theme_option('dl_telegram', 'text');
 
 ?>
 <!doctype html>
@@ -98,43 +105,50 @@
 
 				<div class="dl-header__btn-wrap">
 					<p class="dl-textline dl-textline--s d-none d-sm-block">Безкоштовна консультація</p>
-					<?php //if(!empty($phone_1)) : ?>
+					<?php if(!empty($phone1)) : ?>
 					<p class="dl-textline dl-textline--s d-sm-none d-block">
-						<a class="dl-textline dl-textline--s dl-header__phone" href="tel:380951117135<?php //echo preg_replace('/\s+/', '', esc_html($phone)); ?>">
-							<?php //echo esc_html($phone_2); ?>+38 (095) 111-71-35 </a>
+						<a class="dl-textline dl-textline--s dl-header__phone" href="tel:<?php echo preg_replace('/\s+/', '', esc_html($phone1)); ?>">
+							<?php echo esc_html($phone1); ?></a>
 					</p>
-					<?php //endif; ?>
+					<?php endif; ?>
 					
 					<button class="dl-btn dl-btn--small"  data-target="#modal-getInTouch" data-toggle="modal">
 						<span class="dl-ico dl-ico--phone dl-header__ico dl-header__ico--phone"></span>
+						<span class="dl-btn__animate"></span>
 						Подзвоніть мені
 					</button>
 				</div>
-				
+				<?php if(!empty($tg) || !empty($vb) || !empty($fb) || !empty($ig)) { ?>
 				<div class="dl-header__soc-wrap">
 					<p class="dl-textline dl-textline--s">Пишіть</p>
 					<div class="dl-header__icons-wrap">
-						<a href="#" class="dl-ico dl-ico--tg dl-header__ico dl-header__ico--tg"></a>
-						<a href="#" class="dl-ico dl-ico--vb dl-header__ico dl-header__ico--vb"></a>
-						<a href="#" class="dl-ico dl-ico--fb dl-header__ico dl-header__ico--fb"></a>
-						<a href="#" class="dl-ico dl-ico--ig dl-header__ico dl-header__ico--ig"></a>
+						<?php if(!empty($tg)) { ?>
+							<a href="tg://resolve?domain=<?php echo preg_replace('/\s+/', '', esc_html($tg)); ?>" class="dl-ico dl-ico--tg dl-header__ico dl-header__ico--tg"></a>
+						<?php } if(!empty($vb)) { ?>
+							<a href="viber://add?number=<?php echo preg_replace('/\s+/', '', esc_html($vb)); ?>" class="dl-ico dl-ico--vb dl-header__ico dl-header__ico--vb"></a>
+						<?php } if(!empty($fb)) { ?>
+							<a href="<?php echo preg_replace('/\s+/', '', esc_html($fb)); ?>" class="dl-ico dl-ico--fb dl-header__ico dl-header__ico--fb"></a>
+						<?php } if(!empty($ig)) { ?>
+							<a href="<?php echo preg_replace('/\s+/', '', esc_html($ig)); ?>" class="dl-ico dl-ico--ig dl-header__ico dl-header__ico--ig"></a>
+						<?php } ?>
 					</div>
 				</div>
+				<?php } ?>
 
 				<div class="dl-header__phone-wrap">
 					<p class="dl-textline dl-textline--s">Телефонуйте</p>
 					<div class="dl-header__phones-wrap ">
-						<?php //if(!empty($phone_1)) : ?>
-							<a href="tel:380667377273<?php// echo preg_replace('/\s+/', '', esc_html($phone)); ?>" class="dl-ico dl-ico--smartfon dl-header__ico dl-header__ico--smartfon"></a>
-							<a class="dl-textline dl-textline--s dl-header__phone" href="tel:380951117135<?php// echo preg_replace('/\s+/', '', esc_html($phone)); ?>">
-								<?php //echo esc_html($phone_1); ?>+38 (095) 111-71-35 
+						<?php if(!empty($phone1)) : ?>
+							<a href="tel:<?php echo preg_replace('/\s+/', '', esc_html($phone)); ?>" class="dl-ico dl-ico--smartfon dl-header__ico dl-header__ico--smartfon"></a>
+							<a class="dl-textline dl-textline--s dl-header__phone" href="tel:<?php echo preg_replace('/\s+/', '', esc_html($phone1)); ?>">
+								<?php echo esc_html($phone1); ?>
 							</a>
-						<?php //endif; ?>
-						<?php //if(!empty($phone_2)) : ?>
-							<a class="dl-textline dl-textline--s dl-header__phone" href="tel:380951118386<?php //echo preg_replace('/\s+/', '', esc_html($phone)); ?>">
-								<?php //echo esc_html($phone_2); ?>+38 (095) 111-83-86
+						<?php endif; ?>
+						<?php if(!empty($phone2)) : ?>
+							<a class="dl-textline dl-textline--s dl-header__phone" href="tel:<?php echo preg_replace('/\s+/', '', esc_html($phone2)); ?>">
+								<?php echo esc_html($phone2); ?>
 							</a>
-						<?php // endif; ?>
+						<?php  endif; ?>
 					</div>
 				</div>
 
