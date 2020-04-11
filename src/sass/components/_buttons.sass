@@ -1,37 +1,132 @@
 .dl-btn
   display: inline-block
   text-align: center
-  height: 6rem
-  padding: 0 4rem
+  height: 60px
+  padding: 0 40px
   color: $dl-white
-  background-size: cover
-  background-repeat: no-repeat
-  font-size: 36px
-  max-width: 29.6rem
-  width: 100%
+  background-color: $dl-red
+  font-size: 17px
+  width: auto
+  border: none
+  text-transform: uppercase
   white-space: nowrap
+  cursor: pointer
   user-select: none
   cursor: pointer
-  transition: color .25s, box-shadow .25s, background-color .25s
+  transition: color .55s, box-shadow .55s, background-color .55s
   position: relative
-  transition: background .5s, box-shadow .5s
   border-radius: 5px
+  font-family: gm
+  z-index: 10
+  overflow: hidden
+  &::after 
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: lighten($dl-red, 10%)
+    border-radius: 5px
+    z-index: -2
+  &::before 
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 0%
+    height: 100%
+    background-color: darken($dl-red, 15%)
+    transition: all .3s
+    border-radius: 5px
+    z-index: -1
+
+  &__animate
+    position: absolute
+    width: 100%
+    &::after
+      margin-left: -60px
+      content: ''
+      width: 30px
+      height: 300px
+      background: #fff
+      animation-delay: .05s
+      position: absolute
+      left: -130px
+      top: -130px
+      top-animation-timing-function: ease-in-out
+      transition: all .3s
+      animation-name: slideme
+      animation-duration: 2.5s
+      animation-iteration-count: infinite
+      transform: rotate(45deg)
+  &--effect
+    top-animation-timing-function: ease-in-out
+    transition: all .3s
+    animation-name: jittery
+    animation-delay: .05s
+    animation-duration: 2.5s
+    animation-iteration-count: infinite
+    
+  .dl-ico
+    
+  &:hover
+    color: #fff
+    .dl-ico
+      animation: zcwphone .4s linear
+    &::before
+      width: 120%
+        
+    
+
+  +mq(lg)
+    font-size: 14px
+    // padding: 0 30px
+
+  +mq(470px)
+    white-space: normal
+
   &--full
     max-width: 100%
-    width: auto
+    width: 100%
+
   &--border-white
     border: 3px solid $dl-white
-    font-weight: bold
     background-color: transparent
-
-  
-  &--dark-border
-    border: 1px solid $dl-dark
-    background: $dl-white
-    color: $dl-dark
+    text-transform: none
+    font-size: 36px
+    font-family: g
+    +mq(xl)
+      font-size: 27px
+    +mq(lg)
+      font-size: 22px
+      // height: auto
     &:hover
-      background: $dl-dark 
-      color: $dl-white
+      .dl-ico
+        animation: none
+    &::before, &::after
+      content: none
+
+  &--services
+    height: 103px
+    +mq(lg)
+      height: 50px
+    &::before, &::after
+      content: none
+
+  &--small
+    font-size: 14px
+    width: auto
+    font-family: g
+    height: 44px
+    text-transform: uppercase
+    padding-left: 55px
+    padding-right: 13px
+    +mq(xl)
+      font-size: 14px
+    +mq(lg)
+      font-size: 14px
+
 
   &:focus
     outline: none
@@ -45,40 +140,6 @@
     background-size: 100% 100%
     box-shadow: 0px 20px 30px -20px rgba(1, 1, 1, 0.3)
     color: $dl-white
-
-
-  &--white
-    color: $dl-dark-btn
-    background: $dl-white
-    &:hover
-      color: $dl-dark-btn
-  
-  &--target
-    // animation: ch-pulse .5s infinite cubic-bezier(0.64, 0.57, 0.67, 1.53)
-    overflow: hidden
-    animation: jittery 4s infinite
-    &:hover
-      animation: heartbeat 0.2s infinite
-
-  &--shine
-    overflow: hidden
-
-    &::before
-      content: ''
-      position: absolute
-      display: block
-      animation: move 2s infinite
-      // filter: blur(5px)
-      opacity: .5
-      height: 100%
-      width: 15px
-
-    &-white
-      &::before
-        background: rgba($dl-dark,0.8)
-    &-dark
-      &::before
-        background: rgba($dl-white,0.8)
 
 @keyframes pulse
   0%

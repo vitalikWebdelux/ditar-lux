@@ -1,35 +1,96 @@
-button.slick-arrow
+.slick-arrow
 	border: 0
-	background: $dl-black
-	position: absolute
+	background: $dl-white
+	position: absolute 
 	z-index: 10
-	font-size: 0
-	color: $dl-white
-	width: 6rem	
-	height: 6rem
+	color: $dl-dark
+	border-radius: 50%
+	width: 62px
+	height: 62px
 	line-height: 6rem
 	padding: 0
 	bottom: 5rem
 	right: 50%		
 	transform: translateX(50%)
-	transition: background .3s
+	transition: all .3s ease
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+	+mq(1400px)
+		top: auto
+		bottom: 50px
+
 	&:hover
-		background: #1b1b1c
+		background: $dl-red
+		&::before
+			color: $dl-white
+
 	&::before
-		content: '\e91a'
 		font-family: ci
-		font-size: 1rem
-		color: #e5e5e5
+		font-size: 19px
+		position: absolute	
+		top: 50%	
+		left: 50%	
+		transform: translate(-50%, -50%)
+		+mq(xl)
+			font-size: 16px
+
 	&:focus
 		outline: none
+
+
 	+mq(xl)
 		width: 4rem
 		height: 4rem
+		bottom: 55px
 		line-height: 4rem
 
 	&.slick-next
 		transform: translateX(100%)
-		&::before
-			content: '\e91b'
+
 	&.slick-prev
 		transform: translateX(0%)
+		
+
+	&--next
+		top: 50%
+		right: 30px
+		transform: translateX(-50%) rotate(180deg)
+		
+	&--prev
+		top: 50%
+		left: 30px
+		
+.slick-list, .slick-track
+	height: 100%
+
+.red-dots
+	list-style: none
+	display: flex
+	padding: 0	
+	margin: 0	
+	bottom: 100px
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	+mq(1400px)
+		bottom: 70px
+
+	li
+		display: inline-block
+		margin-right: 42px
+		+mq(xl)
+			margin-right: 21px
+		&:last-child
+			margin-right: 0	
+	button
+		background-color: $dl-dark
+		border: none
+		border-radius: 50%
+		font-size: 0
+		padding: 0	
+		width: 13px
+		height: 13px	
+
+	.slick-active
+		button
+			background-color: $dl-red

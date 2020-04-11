@@ -1,7 +1,31 @@
-@keyframes pulseBoxShadow
+@keyframes zcwphone
 	0%
-		box-shadow: 0 0 0 0 rgba(darken($dl-white, 5%), .6), 0 0 0 0 rgba(darken($dl-white, 5%), .6)
-	70%
-		box-shadow: 0 0 0 12px rgba(darken($dl-white, 5%), 0), 0 0 0 22px rgba(darken($dl-white, 5%), 0)
+		transform: rotate(0)
+		top: 20%
+	25%
+		transform: rotate(-20deg)
+		top: 20%
+	50%
+		transform: rotate(20deg)
+		top: 20%
+	75%
+		transform: rotate(-20deg)
+		top: 20%
 	100%
-		box-shadow: 0 0 0 0 rgba(darken($dl-white, 5%), 0), 0 0 0 0 rgba(darken($dl-white, 5%), 0)
+		transform: rotate(20deg)
+		top: 20%
+
+@keyframes slideme
+	0%
+		left: -130px
+		margin-left: 0
+
+
+	30%
+		left: 110%
+		margin-left: 80px
+
+	100%
+		left: 110%
+		margin-left: 80px
+    

@@ -1,39 +1,85 @@
 body
 	font-family: g, sans-serif
 	min-width: 320px
+	font-size: 16px
 
 .dl-title
-	font-size: 48px
-	font-family: gb, sans-serif
 	line-height: 1
-	span
-		color: $dl-red
-	&--white
-		color: $dl-white
+	font-family: gb
 
-	+mq(xl)
-		font-size: 4.6rem
-	
-	+mq(sm)
-		font-size: 3.8rem
-	+mq(413px)
-		font-size: 3.6rem
-.dl-title, .dl-description
 	&--x
-	&--l
-	&--m
-	&--s
+		font-size: 55px
+		font-family: geb
+		+mq(xl)
+			font-size: 50px
+		+mq(lg)
+			font-size: 44px
+			br
+				display: none
+		+mq(md)
+			font-size: 38px
+		+mq(sm)
+			font-size: 30px
 
-.dl-description
-	color: $dl-white
-	font-size: 3rem
+	&--h
+		font-size: 48px
+
+	&--l
+		font-size: 36px
+		line-height: 1.2
+		+mq(sm)
+			font-size: 27px
+
+	&--s
+		font-size: 20px
+		+mq(sm)
+			font-size: 18px
+
+
+
+
+.dl-desk
 	line-height: 1.2
 	&--dark
 		color: $dl-dark
-	+mq(1370px)
-		font-size: 2.6rem
-	+mq(xl)
-		font-size: 2.4rem
-	+mq(sm)
-		font-size: 2rem
+
 	
+
+	// +mq(1370px)
+	// 	// font-size: 2.6rem
+	// +mq(xl)
+	// 	font-size: 2.4rem
+	// +mq(sm)
+	// 	font-size: 2rem
+
+	&--x
+		font-size: 34px
+		font-family: gm
+		+mq(lg)
+			font-size: 30px
+		+mq(sm)
+			font-size: 24px
+
+	&--l
+		font-size: 18px
+	&--m
+		font-family: gm
+
+	&--s
+.dl-textline
+	&--x
+		font-size: 24px
+		font-family: gb
+		+mq(sm)
+			font-size: 22px
+	&--s
+		font-size: 14px
+	
+.dl-red
+	color: $dl-red
+.dl-orange
+	color: $dl-orange
+.dl-white
+	color: $dl-white
+.dl-dark
+	color: $dl-dark

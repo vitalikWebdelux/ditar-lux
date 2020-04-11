@@ -1,1 +1,0 @@
-<div class="ep-calc__slide"></div>

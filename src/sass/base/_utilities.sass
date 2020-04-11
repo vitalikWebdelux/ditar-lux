@@ -1,7 +1,6 @@
 html
-  font-size: 10px
-  // font-family: $main-font
   min-width: 320px
+  font-size: 10px
 h1,
 h2,
 h3,
@@ -30,6 +29,8 @@ span.wpcf7-not-valid-tip
   text-align: center
   padding-top: .6rem
   margin-bottom: -1rem
+.link-btn
+  line-height: 3.5
 .slick-slide
   outline: 0 !important
   &:focus
@@ -38,15 +39,31 @@ span.wpcf7-not-valid-tip
     outline: none !important
 .slick-list
   outline: none !important
-.text-center
-  text-align: center
+
 .ajax-loader
   display: none !important
 
+.mt-lg-30
+  +mq(lg)
+    margin-top: 30px
+.mb-lg-80
+  +minq(lg)
+    margin-bottom: 57px
+
+.mt-md-15
+  +mq(md)
+    margin-top: 15px
+
+.mb-30
+  margin-bottom: 30px
+.mb-15
+  margin-bottom: 15px
+
 body
+  font-size: 16px
   .container
     @media (min-width: 1200px)
-      max-width: 117rem
+      max-width: 1170px
     @media (max-width: 1200px)
       max-width: 100%
 
@@ -58,15 +75,16 @@ body
   background: $dl-blue
 ::-webkit-scrollbar-thumb:hover
   background: lighten($dl-blue, 5%)
-
-body.modal-open > :not(.modal):not(.cursor)
-  transition: 1s
-  filter: blur(4px)
-
-.dl-main
-  position: relative
-  z-index: 49
-
+label
+  margin-bottom: 0
 img
   max-width: 100%
   height: auto
+button
+  &:focus
+    outline: none
+a
+  color: inherit
+  &:hover
+    color: inherit
+    text-decoration: none

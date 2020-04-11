@@ -9,7 +9,7 @@
 
 get_header(); ?>
 	<section class="error-page">
-		<h1><span>404. </span> <?php _e('Простите, такой страницы не существует!', 'ditarlux'); ?> </h1>
-		<a href="<?php echo site_url();?>" class="ch-button"><?php _e('На главную', 'ditarlux'); ?></a>
+		<h1 class="dl-title dl-title--l"><span>404. </span> Вибачте, такої сторінки не існує! </h1>
+		<a class="dl-btn link-btn" href="<?php echo site_url();?>" class="dl-btn">На головну</a>
 	</section>
 <?php get_footer();

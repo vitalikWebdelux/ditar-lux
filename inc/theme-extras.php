@@ -115,3 +115,24 @@ if ( ! function_exists( 'dl_mime_types' ) ) {
 	}
 	add_filter('upload_mimes', 'dl_mime_types');
 }
+
+
+/**
+ * Redirect http to https
+ */
+
+if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
+    $location = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    header('HTTP/1.1 301 Moved Permanently');
+    header('Location: ' . $location);
+    exit;
+}
+
+add_filter('autoptimize_html_after_minify', 'codeless_remove_type_attr', 10, 2);
+add_filter('style_loader_tag', 'codeless_remove_type_attr', 10, 2);
+add_filter('script_loader_tag', 'codeless_remove_type_attr', 10, 2);
+
+add_filter('autoptimize_html_after_minify', 'codeless_remove_type_attr', 10, 2);
+function codeless_remove_type_attr($tag, $handle) {
+    return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );
+}

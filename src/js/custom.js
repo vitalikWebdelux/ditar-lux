@@ -140,16 +140,143 @@ var chThemeModule;
 
 		return {
 			init: function() {
-				this.leafletMap();
+				this.leafletMap(); 
+				this.cf7();
+				this.sliders();
+				this.preloader();
+				this.lazyLoadWindow();
 			},
 
 			/**
 			 *-------------------------------------------------------------------------------------------------------------------------------------------
-			 * 1. Cursor
+			 * 0. window load
 			 *-------------------------------------------------------------------------------------------------------------------------------------------
 			 */
-			ready: function() {
-				console.log('ready')
+
+			lazyLoadWindow: function(){
+				var pl = this.preloader();
+			 	window.onload = function(){
+			 		$('.preloader').css({
+			 			'visibility': 'hidden',
+			 			'display': 'none'
+			 		});
+			 		pl = null;
+			 	}
+			 },
+
+			/**
+			 *-------------------------------------------------------------------------------------------------------------------------------------------
+			 * 1. preloader
+			 *-------------------------------------------------------------------------------------------------------------------------------------------
+			 */
+			preloader: function() {
+
+				TweenMax.set('#circlePath', {
+					  attr: {
+					    r: document.querySelector('#mainCircle').getAttribute('r')
+					  }
+					})
+					MorphSVGPlugin.convertToPath('#circlePath');
+
+					var xmlns = "http://www.w3.org/2000/svg",
+					  xlinkns = "http://www.w3.org/1999/xlink",
+					  select = function(s) {
+					    return document.querySelector(s);
+					  },
+					  selectAll = function(s) {
+					    return document.querySelectorAll(s);
+					  },
+					  mainCircle = select('#mainCircle'),
+					  mainContainer = select('#mainContainer'),
+					  car = select('#car'),
+					  mainSVG = select('.mainSVG'),
+					  mainCircleRadius = Number(mainCircle.getAttribute('r')),
+					  //radius = mainCircleRadius,
+					  numDots = mainCircleRadius / 2,
+					  step = 360 / numDots,
+					  dotMin = 0,
+					  circlePath = select('#circlePath')
+
+					//
+					//mainSVG.appendChild(circlePath);
+					TweenMax.set('svg', {
+					  visibility: 'visible'
+					})
+					TweenMax.set([car], {
+					  transformOrigin: '50% 50%'
+					})
+					TweenMax.set('#carRot', {
+					  transformOrigin: '0% 0%',
+					  rotation:30
+					})
+
+					var circleBezier = MorphSVGPlugin.pathDataToBezier(circlePath.getAttribute('d'), {
+					  offsetX: -20,
+					  offsetY: -5
+					})
+
+
+
+					//console.log(circlePath)
+					var mainTl = new TimelineMax();
+
+					function makeDots() {
+					  var d, angle, tl;
+					  for (var i = 0; i < numDots; i++) {
+
+					    d = select('#puff').cloneNode(true);
+					    mainContainer.appendChild(d);
+					    angle = step * i;
+					    TweenMax.set(d, {
+					      //attr: {
+					      x: (Math.cos(angle * Math.PI / 180) * mainCircleRadius) + 400,
+					      y: (Math.sin(angle * Math.PI / 180) * mainCircleRadius) + 300,
+					      rotation: Math.random() * 360,
+					      transformOrigin: '50% 50%'
+					        //}
+					    })
+
+					    tl = new TimelineMax({
+					      repeat: -1
+					    });
+					    tl
+					      .from(d, 0.2, {
+					        scale: 0,
+					        ease: Power4.easeIn
+					      })
+					      .to(d, 1.8, {
+					        scale: Math.random() + 2,
+					        alpha: 0,
+					        ease: Power4.easeOut
+					      })
+
+					    mainTl.add(tl, i / (numDots / tl.duration()))
+					  }
+					  var carTl = new TimelineMax({
+					    repeat: -1
+					  });
+					  carTl.to(car, tl.duration(), {
+					    bezier: {
+					      type: "cubic",
+					      values: circleBezier,
+					      autoRotate: true
+					    },
+					    ease: Linear.easeNone
+					  })
+					  mainTl.add(carTl, 0.05)
+					}
+
+				makeDots();
+				mainTl.time(120);
+				TweenMax.to(mainContainer, 20, {
+				  rotation: -360,
+				  svgOrigin: '400 300',
+				  repeat: -1,
+				  ease: Linear.easeNone
+				});
+				mainTl.timeScale(1.1)
+
+
 			},
 
 			/**
@@ -157,31 +284,84 @@ var chThemeModule;
 			 * 2. Leaflet map
 			 *-------------------------------------------------------------------------------------------------------------------------------------------
 			 */
+
 			leafletMap: function() {
-				var map_cont = document.getElementById('ch-map');
-
-				if( map_cont ) {
-					var map = L.map('ch-map').setView(new L.LatLng(map_cont.dataset.lat, map_cont.dataset.long), map_cont.dataset.zoom);
-
-					L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-						attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-					}).addTo(map);
-
-					var MapMarker = L.icon({
-						iconUrl: 'https://chopovskyi.dental/wp-content/themes/dental/assets/img/gps.png',
-						iconSize: [75, 106],
-					});
-
-					map.attributionControl.setPrefix(false);
-
-					var marker = new L.marker([map_cont.dataset.lat, map_cont.dataset.long], {
-						icon: MapMarker
-					});
-
-					map.addLayer(marker);
-				}
+				if(!($('body').hasClass('page-id-15'))){
+					var map_cont = $('#dl-map');
+					if( map_cont ) {
+						var map = L.map('dl-map').setView(new L.LatLng(48.941519, 24.715997), 14);
+						L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+							attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+						}).addTo(map);
+						var MapMarker = L.icon({
+							iconUrl: '/ditar-lux/wp-content/themes/ditar-lux/assets/img/icons/geo.svg',
+							iconSize: [52, 42],
+						});
+						map.attributionControl.setPrefix(false);
+						var marker = new L.marker([48.94151, 24.715997], {
+							icon: MapMarker
+						});
+						map.addLayer(marker);
+					}
+				} 
 				
 			},
+
+			cf7: function() {
+		        $("input[type='tel']").inputmask({
+                    mask: "(099) 999-99-99"
+                }),
+                $('input[type="tel"]').on("change keyup keydown", function() {
+                    var e = $(this).val();
+                    "0" == ("" + e)[2] && ($(this).val(" "),
+                    $(this).blur().focus()),
+                    $('button[type="submit"]').attr("disabled", "disabled"),
+                    new RegExp("_$").test(e) ? $(this).addClass("error-phone") : ($(this).removeClass("error-phone"),
+                    $('button[type="submit"]').removeAttr("disabled"),
+                    $('button[type="submit"]').removeAttr("disabled").find(".shine-button__el").addClass("animate"))
+                }),
+                $(".wpcf7").on("wpcf7mailsent", function(e) {
+                	$(".modal").modal("hide");
+                    $("#modal-thanks").modal("show");
+                    
+                    setTimeout(function() {
+                        $("#modal-thanks").modal("hide");
+                    }, 3400)
+                })
+      		},
+
+      		sliders: function(){
+      			if($('.dl-hero__slider').length > 0){
+      				$('.dl-hero__slider').slick({
+      					slidesToShow: 1,
+						slidesToScroll: 1,
+						nextArrow: "<button class=\"dl-hero__slider-next dl-ico dl-ico--arrow slick-arrow--next\"></button>",
+						prevArrow: "<button class=\"dl-hero__slider-prev dl-ico dl-ico--arrow slick-arrow--prev\"></button>",
+						dots: true,
+						autoplay: true,
+  						autoplaySpeed: 5000,
+  						dotsClass: 'red-dots',
+						// responsive: [{
+						// 		breakpoint: 760,
+						// 		settings: {
+						// 			slidesToShow: 2,
+						// 		},
+								
+						// 	},
+						// 	{
+						// 		breakpoint: 500,
+						// 		settings: {
+						// 			slidesToShow: 1,
+						// 			variableWidth: true,
+						// 		}
+						// 	},
+						
+						// ],
+      				})
+      			}
+      		}
+
+
 		}
 	}());
 })(jQuery);

@@ -1,0 +1,93 @@
+.dl-hero
+	$this: &
+	height: 740px
+	+mq(lg)
+		height: calc(100vh - 100px)
+		min-height: 568px
+
+	&--auto_usa
+		#{$this}__btn-wrap
+			button
+				width: 379px
+
+.dl-form
+	position: relative
+	&__auto-img-wrap
+		position: absolute
+		width: 100%
+		height: 100%
+		overflow: hidden
+		position: absolute
+		bottom: -233px
+		left: 0
+		img 
+			position: absolute
+			bottom: 0
+			left: 0
+			+mq(1675px)
+				max-width: 475px
+			+mq(xl)
+				max-width: 350px
+			+mq(md)
+				max-width: 275px
+				bottom: 54px
+			+mq(sm)
+				max-width: 295px
+	padding-top: 250px
+	padding-bottom: 250px - 44px
+	+mq(lg)
+		padding-top: 200px
+
+.dl-form_autoservice
+	padding-top: 250px
+	+mq(lg)
+		padding-top: 230px
+
+.dl-scheme
+	position: relative
+	z-index: 1
+
+.dl-features
+	padding-top: 100px
+	&--usa
+		
+		+mq(lg)
+			padding-top: 50px
+	&--autoservice
+		+mq(xl)
+			padding-top: 140px
+
+
+.dl-othrers-services
+	padding-top: 100px
+	padding-bottom: 100px
+	position: relative
+	+mq(lg)
+		padding-top: 20px
+	+mq(md)
+		padding-bottom: 75px
+	&::before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 270px
+		background-color: $dl-white
+ 
+.dl-components-services
+	padding-top: 100px
+	margin-bottom: -150px
+	position: relative
+	z-index: 1
+	.container-fluid
+		max-width: 1590px
+	+mq(lg)
+		padding-top: 50px
+
+
+.dl-contacts
+	padding: 68px 0
+	background: linear-gradient(60.83deg, #070606 21.52%, #4C5155 98.54%, #5F5656 103.87%)
+	+mq(lg)
+		padding-bottom: 30px

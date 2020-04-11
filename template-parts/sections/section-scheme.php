@@ -1,93 +1,98 @@
-<section class="ep-scheme">
-	<div class="ep-scheme__overlay-left"></div>
-	<div class="ep-scheme__overlay-right"></div>
+<section class="dl-scheme">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6">
-				
-					<div class="ep-scheme__inner">	
-						<h2 class="ep-title ep-title--lg ep-scheme__title-left"><?php _e('Схема роботи:', 'effectProf'); ?></h2>
+			<div class="col-lg-12">
+				<div class="dl-scheme__box">
+					<h2 class="dl-scheme__title dl-title dl-title--l text-center">
+						Як ми працюємо?
+					</h2>
+					<div class="dl-scheme__list">
 						<div class="row">
-							<div class="col-lg-6">	
-								<div class="ep-scheme__item">
-									<div class="ep-scheme__item-top">
-										<p class="ep-scheme__item-num">01</p>
-										<span class="ep-ico ep-ico-message"></span>
-									</div>
-									<p class="ep-deskription ep-deskription--m ep-scheme__name">
-										<?php _e('Заявка з сайту', 'effectProf'); ?>
-									</p>
+							<div class="col-lg-3 col-sm-6">
+								<div class="dl-scheme__item dl-ico dl-ico--arrow_xl">
+									<span class="dl-ico dl-ico--auto dl-scheme__ico dl-red text-center"></span>
+									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
+										Підбір авто
+									</h3>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Ми обираємо авто виходячи з вашого бюджету та побажань</span></p>
 								</div>
 							</div>
-							<div class="col-lg-6">
-								<div class="ep-scheme__item"> 
-									<div class="ep-scheme__item-top">
-										<p class="ep-scheme__item-num">02</p>
-										<span class="ep-ico ep-ico-bell"></span>
-									</div>
-
-									<p class="ep-deskription ep-deskription--m ep-scheme__name">
-										<?php _e('Дзвінок менеджера. <br>
-										Консультація.', 'effectProf'); ?>
-									</p>
+							<div class="col-lg-3 col-sm-6">
+								<div class="dl-scheme__item dl-scheme__item--2 dl-ico dl-ico--arrow_xl ">
+									<span class="dl-ico dl-ico--calc dl-scheme__ico dl-red text-center"></span>
+									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
+										Калькуляція
+									</h3>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Ще до купівлі авто у Вас буде розрахунок на вибраний автомобіль</span></p>
 								</div>
 							</div>
-							<div class="col-lg-6">
-								<div class="ep-scheme__item ">
-									<div class="ep-scheme__item-top">
-										<p class="ep-scheme__item-num">03</p>
-										<span class="ep-ico ep-ico-doc"></span>
-									</div>
-
-									<p class="ep-deskription ep-deskription--m ep-scheme__name">
-										<?php _e('Підписання договору <br> 
-											та виставлення <br> 
-											рахунку', 'effectProf'); ?>
-									</p>
+							<div class="col-lg-3 col-sm-6">
+								<div class="dl-scheme__item dl-ico dl-ico--arrow_xl">
+									<span class="dl-ico dl-ico--progres dl-scheme__ico dl-red text-center"></span>
+									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
+										Аукціон
+									</h3>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Участь в онлайн торгах та купівля авто відповідно до замовлення</span></p>
 								</div>
 							</div>
-							<div class="col-lg-6">
-								<div class="ep-scheme__item">
-									<div class="ep-scheme__item-top">
-										<p class="ep-scheme__item-num">04</p>
-										<span class="ep-ico ep-ico-watch"></span>
-									</div>
-
-									<p class="ep-deskription ep-deskription--m ep-scheme__name">
-										<?php _e('Швидка поставка <br>
-											товару в обумовлені <br>
-											терміни', 'effectProf'); ?>
-									</p>
+							<div class="col-lg-3 col-sm-6">
+								<div class="dl-scheme__item">
+									<span class="dl-ico dl-ico--wallet dl-scheme__ico dl-red text-center"></span>
+									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
+										Оплата
+									</h3>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Платіжки проводяться SWIFT переводом через банк та гарантує прозорість</span></p>
 								</div>
 							</div>
 						</div>
 					</div>
-				
-			</div>
-			<div class="col-lg-6">
-			
-				<div class="ep-scheme__inner">	
-					<h2 class="ep-title ep-title--lg ep-scheme__title-right">
-						<span>Ми робимо вигідну</span><br>
-						пропозицію для наших клієнтів
-					</h2>
-					<p class="ep-scheme__subtitle ep-deskription ep-deskription--m">
-						<span>В 98% випадків гарантуємо найкращу ціну в  Україні</span>
-					</p>
-					<div class="ep-scheme__text-wrap">
-						<p class="ep-text ep-scheme__text">
-							FFECT PROF ALUMINIUM - провідний виробник високоякісних алюмінієвих профілів в Україні. Успіх діяльності компанії - це професіоналізм і енергійність згуртованого колективу. Потужності нового заводу з виробництва алюмінієвих профілів, багаторічний досвід успішної роботи фахівців компанії, повний цикл виробництва дозволяють виконувати всі необхідні технологічні операції при випуску якісних алюмінієвих профілів. 
-						</p>
-						<p class="ep-text ep-scheme__text ">
-							Колектив компанії EFFECT PROF ALUMINIUM уважний до клієнта, працюємо сумлінно, швидко, якісно, ​​надійно. Нам довіряють і з нами працюють тисячі наших клієнтів. Мета компанії - задовольнити вимоги наших клієнтів при виготовленні алюмінієвих профілів для довгострокового і взаємовигідного співробітництва з нашою компанією на будь-якому етапі роботи.
-						</p>
+					<div class="dl-scheme__list">
+						<div class="row">
+							<div class="col-lg-3 col-sm-6">
+								<div class="dl-scheme__item dl-ico dl-ico--arrow_xl">
+									<span class="dl-ico dl-ico--delivery dl-scheme__ico dl-red dl-scheme__delivery-ico text-center"></span>
+									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
+										Доставка
+									</h3>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Авто доставляється кораблем в контейнерах та прибуває в Україну</span></p>
+								</div>
+							</div>
+
+							<div class="col-lg-3 col-sm-6">
+								<div class="dl-scheme__item dl-scheme__item--2 dl-ico dl-ico--arrow_xl">
+									<span class="dl-ico dl-ico--clearance dl-scheme__ico dl-red text-center"></span>
+									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
+										Розмитнення
+									</h3>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Відбувається розмитнення авто за зниженими тарифами</span></p>
+								</div>
+							</div>
+
+							<div class="col-lg-3 col-sm-6">
+								<div class="dl-scheme__item dl-ico dl-ico--arrow_xl">
+									<span class="dl-ico dl-ico--repair dl-scheme__ico dl-red text-center"></span>
+									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
+										Ремонт
+									</h3>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Проводиться ремонт автомобіля</span></p>
+								</div>
+							</div>
+
+							<div class="col-lg-3 col-sm-6">
+								<div class="dl-scheme__item">
+									<span class="dl-ico dl-ico--sertif dl-scheme__ico dl-red text-center"></span>
+									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
+										Сертифікація
+									</h3>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Допомога та супровід в сертифікації та реєстрації авто</span></p>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="ep-scheme__link-wrap ep-ico ep-ico-fast-forward">
-						<a href="#" class="ep-link ep-link--scheme"><?php _e('Детальніше про компанію', 'effectProf'); ?></a>
-					</div>
+					
 				</div>
-				
+				<div id="dl-scheme__box-id" class="d-none"></div>
 			</div>
 		</div>
-	</div>
+	</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 </section>

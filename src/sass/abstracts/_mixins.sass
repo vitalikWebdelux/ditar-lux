@@ -104,22 +104,23 @@
     font-weight: normal
     font-style: normal
 
-  .ep-ico
+  .dl-ico
     // use !important to prevent issues with extensions
-    font-family: "#{$name}" !important
-    speak: none
-    font-style: normal
-    font-weight: normal
-    font-variant: normal
-    text-transform: none
-    line-height: 1
+    &::before
+      font-family: "#{$name}" !important
+      speak: none
+      font-style: normal
+      font-weight: normal
+      font-variant: normal
+      text-transform: none
+      line-height: 1
 
     // better font rendering
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
 
   @each $icon, $content in $icons
-    .ep-ico--#{$icon}
+    .dl-ico--#{$icon}
       // extend options
       // @extend %icomoon-opts
 

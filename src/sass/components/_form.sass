@@ -1,14 +1,17 @@
-.ch-form
-	
-	&--black
-		.form-group
-			[type='text']
-				background: #0f0f10
-				color: $dl-white
-				border-bottom: 1px solid #363636
-
-			&::before
-				color: $dl-blue
+[type='text'], [type='tel']
+	height: 54px
+	border: none
+	background-color: transparent
+	font-size: 20px
+	width: 100%
+	border-radius: 0
+	font-family: gm
+	transition: border .2s ease-in
+	&:focus
+		outline: none
+		border-bottom: 2px solid $dl-red
+[type='tel']
+	font-family: gb
 .form-group
 	position: relative
 	br
@@ -28,6 +31,7 @@
 		position: absolute
 		width: 100%
 		right: 0
+		text-align: left
 		left: 0
 
 	.wpcf7-form-control-wrap
@@ -41,15 +45,11 @@
 		&::before
 			content: '\e913'
 
+	&__dark
+		border-bottom: 2px solid $dl-dark
 
-[type='text']
-	height: 6rem
-	border: none
-	border-bottom: 1px solid $dl-dark
-	font-size: 1.6rem
-	width: 100%
-	padding-left: 4rem
-	border-radius: 0
-	&:focus
-		outline: none
-		box-shadow: 0 0 0 1px rgba($dl-blue, .5)
+	&__white
+		border-bottom: 2px solid $dl-white
+
+
+

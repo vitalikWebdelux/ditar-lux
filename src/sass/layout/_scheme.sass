@@ -1,0 +1,72 @@
+.dl-scheme
+	&__ico
+		margin-bottom: 8px
+		display: block 
+		height: 46px
+		 
+		&::before
+			font-size: 42px
+			
+
+	&__title
+		margin-bottom: 8px
+
+	&__desk
+		color: $dl-dark
+		display: flex
+		justify-content: center
+		span
+			max-width: 200px
+			+mq(md)
+				max-width: 450px
+
+		&--lg
+			span
+				+mq(lg)
+					max-width: 450px
+
+
+	&__box
+		background-color: $dl-white
+		box-shadow: 0px 40px 20px rgba(0, 0, 0, 0.25)
+		border-radius: 5px
+		margin-top: -40px
+		padding-top: 80px
+		padding-bottom: 150px
+		margin-bottom: -150px
+		+mq(xl)
+			padding: 60px 0
+			margin-bottom: -200px
+		+mq(lg)
+			margin-bottom: -150px
+
+
+	&__list
+		margin-top: 80px	
+		+mq(lg)
+			margin-top: 0
+
+	&__item
+		position: relative
+		+mq(lg)
+			margin-top: 30px
+			padding: 0 15px
+		&::before
+			font-size: 18px
+			top: 25%
+			transform: translateY(-50%)
+			position: absolute
+			right: -47px
+			+mq(lg)
+				font-size: 18px
+			+mq(md)
+				font-size: 15px
+			+mq(sm)
+				display: none
+		&--2
+			&::before
+				+mq(lg)
+					display: none
+	&__delivery-ico
+		&::before
+			font-size: 30px

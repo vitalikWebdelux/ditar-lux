@@ -1,9 +1,105 @@
+<?php 
+$address = carbon_get_theme_option('dl_address', 'rich_text');
+
+$ig = carbon_get_theme_option('dl_instagram', 'text');
+$fb = carbon_get_theme_option('dl_facebook', 'text');
+$vb = carbon_get_theme_option('dl_viber', 'text');
+$tg = carbon_get_theme_option('dl_telegram', 'text');
+
+$phone1 = carbon_get_theme_option('dl_phone', 'text');
+$phone2 = carbon_get_theme_option('dl_phone_2', 'text');
+ ?>
+<section class="dl-contacts">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="dl-contacts__overlay">
+					<div class="dl-contacts__wrap">
+						<p class="dl-textline dl-textline--x dl-red">
+							<span class="dl-contacts__ico dl-contacts__ico--geo dl-white"></span>
+							Завітайте:
+						</p> 
+						<?php if(!empty($address)) { ?>
+							<p class="dl-white dl-contacts__adress"><?php echo $address; ?></p>
+						<?php } ?>
+						<div class="dl-contacts__position">
+							<p class="dl-textline dl-textline--x  dl-red">
+								Долучайтесь:
+							</p>
+							<div class="dl-header__icons-wrap">
+								<?php if(!empty($ig)) { ?>
+									<a href="<?php echo preg_replace('/\s+/', '', esc_html($ig)); ?>" class="dl-ico dl-ico--ig dl-white dl-contacts__soc">Instagram</a>
+								<?php } if(!empty($fb)) { ?>
+									<a href="<?php echo preg_replace('/\s+/', '', esc_html($fb)); ?>" class="dl-ico dl-ico--fb dl-white dl-contacts__soc">Facebook</a>
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+
+					<div class="dl-contacts__wrap">
+						<p class="dl-textline dl-textline--x  dl-red">
+							<span class="dl-ico dl-ico--smartfon dl-contacts__ico dl-white"></span>
+							Телефонуйте:
+						</p>
+						<p class="dl-white">
+							<a href="tel:+38(095)111-49-90">+38 (095) 111-49-90 Автосервіс</a>
+						</p>
+						<p class="dl-white">
+							<a href="tel:+38(095)111-71-35">+38 (095) 111-71-35 Авто з США</a>
+						</p>
+						<p class="dl-white">
+							<a href="tel:+38(095)111-83-86">+38 (095) 111-83-86 Інф.підтримка</a>
+						</p>
+						<div class="dl-contacts__btn-wrap">
+							<button class="dl-btn dl-btn--border-white dl-btn--small" data-target="#modal-getInTouch" data-toggle="modal">
+								<span class="dl-ico dl-ico--phone dl-header__ico dl-header__ico--phone"></span>
+								Подзвоніть мені
+							</button>
+						</div>
+					</div>
+					<div class="dl-contacts__wrap dl-contacts__soc-wrap ">
+						<p class="dl-textline dl-textline--x  dl-red">
+							Пишіть:
+						</p>
+						<div class="dl-header__icons-wrap">
+							
+							
+							<?php if(!empty($tg)) { ?>
+								<a href="tg://resolve?domain=<?php echo preg_replace('/\s+/', '', esc_html($tg)); ?>" class="dl-ico dl-ico--tg dl-white dl-contacts__soc">Telegram</a>
+							<?php } if(!empty($vb)) { ?>
+								<a href="viber://add?number=<?php echo preg_replace('/\s+/', '', esc_html($vb)); ?>" class="dl-ico dl-ico--vb dl-white dl-contacts__soc">Viber</a>
+							<?php } ?>
+						</div>
+						<div class="dl-contacts__margin-top">
+							<p class="dl-textline dl-textline--x  dl-red">
+								Долучайтесь:
+							</p>
+							<div class="dl-header__icons-wrap"> 
+								<?php if(!empty($ig)) { ?>
+									<a href="<?php echo preg_replace('/\s+/', '', esc_html($ig)); ?>" class="dl-ico dl-ico--ig dl-white dl-contacts__soc">Instagram</a>
+								<?php } if(!empty($fb)) { ?>
+									<a href="<?php echo preg_replace('/\s+/', '', esc_html($fb)); ?>" class="dl-ico dl-ico--fb dl-white dl-contacts__soc">Facebook</a>
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="col-lg-8">
+				<div class="dl-map-wrap">
+                    <div id="dl-map"></div>
+                </div>
+			</div>
+		</div>
+	</div>
+</section>
 <footer class="footer">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="footer__copyright">
-					<span class="footer__copyright-text">© <?php echo esc_html( date('Y ') ); _e('Всі права захищено.', 'effectprof'); ?></span>
+					<span class="footer__copyright-text">© <?php echo esc_html( date('Y ') ); echo 'Всі права захищено.'; ?></span>
 				</div>
 			</div>
 			<div class="col-lg-6">
