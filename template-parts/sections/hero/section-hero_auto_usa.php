@@ -33,7 +33,7 @@
 							</p>
 							<h2 class="dl-title dl-title--x  dl-hero__title text-center text-lg-left">Авто доставляється кораблем <br>  в 	контейнерах та прибуває в <br> Україну в максимально  <br> короткий термін</h2>
 							<div class="dl-hero__btn-wrap">
-								<button class="dl-hero__btn dl-btn dl-btn--effect" data-toggle="modal" data-target="#modal-pickUpAuto">
+								<button class="dl-hero__btn dl-btn dl-btn--effect" data-toggle="modal" data-target="#modal-call">
 									Замовити дзвінок
 								</button>
 							</div>
@@ -53,7 +53,7 @@
 							</p>
 							<h2 class="dl-title dl-title--x  dl-hero__title text-center text-lg-left">Допомога та супровід в <br> сертифікації та реєстрації <br> авто </h2>
 							<div class="dl-hero__btn-wrap">
-								<button class="dl-hero__btn dl-btn dl-btn--effect" data-toggle="modal" data-target="#modal-pickUpAuto">
+								<button class="dl-hero__btn dl-btn dl-btn--effect" data-toggle="modal" data-target="#modal-call">
 									Замовити дзвінок
 								</button>
 							</div>
@@ -63,6 +63,5 @@
 			</div>
 		</div>
 
-		
 	</div>
 </section>

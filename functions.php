@@ -83,3 +83,14 @@ function my_action_callback() {
 
 	wp_die(); // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
 }
+
+add_filter( 'wpcf7_form_elements', 'imp_wpcf7_form_elements' );
+function imp_wpcf7_form_elements( $content ) {
+    $str_pos = strpos( $content, 'name="text"' );
+    $content = substr_replace( $content, '  autocomplete="off" ', $str_pos, 0 );
+
+    $str_pos = strpos( $content, 'name="tel"' );
+    $content = substr_replace( $content, '  autocomplete="off" ', $str_pos, 0 );
+
+    return $content;
+}

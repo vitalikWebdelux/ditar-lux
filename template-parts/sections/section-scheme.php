@@ -14,7 +14,7 @@
 									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
 										Підбір авто
 									</h3>
-									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Ми обирємо авто виходячи з вашого бюджету та побажань</span></p>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Ми обираємо авто виходячи з вашого бюджету та побажань</span></p>
 								</div>
 							</div>
 							<div class="col-lg-3 col-sm-6">
@@ -32,7 +32,7 @@
 									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
 										Аукціон
 									</h3>
-									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Участь в оналайн торгах та купівля авто відповідно до замовлення</span></p>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Участь в онлайн торгах та купівля авто відповідно до замовлення</span></p>
 								</div>
 							</div>
 							<div class="col-lg-3 col-sm-6">
@@ -41,7 +41,7 @@
 									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
 										Оплата
 									</h3>
-									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Платіжки проводяться SWIFT переводом через Банк та гарантує прозорість</span></p>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Платіжки проводяться SWIFT переводом через банк та гарантує прозорість</span></p>
 								</div>
 							</div>
 						</div>
@@ -54,7 +54,7 @@
 									<h3 class="dl-title dl-title--s dl-scheme__title text-center">
 										Доставка
 									</h3>
-									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Авто доставляється Кораблем в контейнерах та прибуває в Україну</span></p>
+									<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Авто доставляється кораблем в контейнерах та прибуває в Україну</span></p>
 								</div>
 							</div>
 

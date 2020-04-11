@@ -1,10 +1,9 @@
 .dl-hero
 	$this: &
-	height: 830px
+	height: 740px
 	+mq(lg)
 		height: calc(100vh - 100px)
-	@media screen and (max-height: 600px)
-		height: 540px
+		min-height: 568px
 
 	&--auto_usa
 		#{$this}__btn-wrap
@@ -51,8 +50,12 @@
 .dl-features
 	padding-top: 100px
 	&--usa
+		
 		+mq(lg)
 			padding-top: 50px
+	&--autoservice
+		+mq(xl)
+			padding-top: 140px
 
 
 .dl-othrers-services
@@ -61,6 +64,8 @@
 	position: relative
 	+mq(lg)
 		padding-top: 20px
+	+mq(md)
+		padding-bottom: 75px
 	&::before
 		content: ''
 		position: absolute
@@ -84,3 +89,5 @@
 .dl-contacts
 	padding: 68px 0
 	background: linear-gradient(60.83deg, #070606 21.52%, #4C5155 98.54%, #5F5656 103.87%)
+	+mq(lg)
+		padding-bottom: 30px

@@ -1,6 +1,6 @@
 <section class="dl-form bg bg--form">
 	<div class="dl-form__auto-img-wrap">
-		<img src="<?php echo SD_THEME_IMAGE_URI; ?>/form-car.png" alt="">
+		<img src="<?php echo SD_THEME_IMAGE_URI; ?>/form-car.png" alt="Автомобіль">
 	</div>
 	<div class="container-fluid">
 		<div class="row no-gutters">

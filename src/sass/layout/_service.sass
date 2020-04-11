@@ -1,11 +1,9 @@
 .dl-service
 	display: flex
 	align-items: center
-	height: calc(100% - 130px)
+	height: calc(100vh - 100px)
 	padding-bottom: 30px
-	+mq(lg)
-		height: auto
-
+	min-height: 650px
 	$this: &
 
 	&__inner
@@ -13,7 +11,7 @@
 			max-width: 450px
 
 	&-wrap
-		height: 100vh
+		// height: 100vh 
 
 	&__title
 		margin-bottom: 50px
@@ -26,12 +24,15 @@
 		border-radius: 5px
 		overflow: hidden
 		position: relative
+
 		+mq(lg)
 			display: flex
 			justify-content: center
+
 		&:hover
 			#{$this}__gradient
 				opacity: 1
+
 		// max-width: 375px
 		// height: 406px
 
@@ -42,8 +43,7 @@
 		+mq(lg)
 			width: 100%
 			max-width: none
-		+mq(sm)
-			// height: 203px/
+			height: 150px
 
 	&__btn-wrap
 		position: absolute

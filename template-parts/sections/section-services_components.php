@@ -14,7 +14,7 @@
 								<li class="dl-white">-Комп’ютерна діагностика</li>
 								<li class="dl-white">-Заміна мастил</li>
 								<li class="dl-white">-Заміна рідин</li>
-								<li class="dl-white">-Планове <br>тех-обслуговування</li>
+								<li class="dl-white">-Планове <br>техобслуговування</li>
 								<li class="dl-white">-Заміна фільтрів</li>
 								<li class="dl-white">-Заміна ГРМ системи</li>
 								<li class="dl-white">-Діагностика авто</li>

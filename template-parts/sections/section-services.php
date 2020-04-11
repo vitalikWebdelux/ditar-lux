@@ -6,42 +6,42 @@
 			</div>
 			<div class="col-md-6  col-lg-4">
 				<div class="dl-service__overlay ">
-					<div class="position-relative">
-						<div class="dl-service__gradient"></div>
-						<img src="<?php echo SD_THEME_IMAGE_URI; ?>/select1.png" alt="">
+					<a href="http://bric.org.ua/<?php echo SD_THEME_SLUG; ?>/auto-with-usa" class="position-relative d-block">
+						<span class="dl-service__gradient d-block"></span>
+						<img src="<?php echo SD_THEME_IMAGE_URI; ?>/select1.png" alt="Авто з США">
 
-						<div class="dl-service__btn-wrap">
-							<a href="http://bric.org.ua/<?php echo SD_THEME_SLUG; ?>/auto-with-usa" class="dl-btn dl-btn--border-white dl-service__btn">
+						<span class="dl-service__btn-wrap">
+							<span class="dl-btn dl-btn--border-white dl-service__btn">
 								Авто з США
-							</a>
-						</div>
-					</div>
+							</span>
+						</span>
+					</a>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-4">
 				<div class="dl-service__overlay mt-md-15">
-					<div class="position-relative">
-						<div class="dl-service__gradient"></div>
-						<img src="<?php echo SD_THEME_IMAGE_URI; ?>/select2.png" alt="">
-						<div class="dl-service__btn-wrap">
-							<a href="http://bric.org.ua/<?php echo SD_THEME_SLUG; ?>/avtoservis" class="dl-btn dl-btn--border-white dl-service__btn">
+					<a href="http://bric.org.ua/<?php echo SD_THEME_SLUG; ?>/avtoservis"  class="position-relative d-block">
+						<span class="dl-service__gradient d-block"></span>
+						<img src="<?php echo SD_THEME_IMAGE_URI; ?>/select2.png" alt="Автосервіс">
+						<span class="dl-service__btn-wrap">
+							<span class="dl-btn dl-btn--border-white dl-service__btn">
 								Автосервіс
-							</a>
-						</div>
-					</div>
+							</span>
+						</span>
+					</a>
 				</div>
 			</div>
 			<div class="col-md-12 col-lg-4">
 				<div class="dl-service__overlay mt-lg-30 mt-md-15">
-					<div class="position-relative">
-						<div class="dl-service__gradient"></div>
-						<img src="<?php echo SD_THEME_IMAGE_URI; ?>/select3.png" alt="">
-						<div class="dl-service__btn-wrap">
-							<a href="https://autogroup.org.ua" class="dl-btn dl-btn--border-white dl-service__btn">
+					<a href="https://autogroup.org.ua" class="position-relative d-block">
+						<span class="dl-service__gradient d-block"></span>
+						<img src="<?php echo SD_THEME_IMAGE_URI; ?>/select3.png" alt="Сайт автогруп">
+						<span class="dl-service__btn-wrap">
+							<span class="dl-btn dl-btn--border-white dl-service__btn">
 								Авторозбір
-							</a>
-						</div>
-					</div>
+							</span>
+						</span>
+					</a>
 				</div>
 			</div>
 		</div>

@@ -5,14 +5,11 @@
 	justify-content: space-between
 	padding: 0
 	margin: 0
-	height: 88px
+	height: 50px
 	align-items: center
 	background-color: $dl-white
-	+mq(1025px)
-		height: 50px
 
-
-.menu-item
+.menu-item 
 	width: calc(100% / 3)
 	display: flex
 	justify-content: center
@@ -22,7 +19,15 @@
 	+mq(1500px)
 		border: 1px solid #E5E5E5
 		border-top: 0
-		border-bottom: 0
+		border-bottom: 0 
+
+	a
+		width: 100%
+		height: 100%
+		display: block
+		display: flex
+		justify-content: center
+		align-items: center
 
 	&:first-child
 		justify-content: flex-start
@@ -39,6 +44,8 @@
 
 	font-size: 24px
 	font-family: gb
+	+mq(1525px)
+		font-size: 21px
 	+mq(1025px)
 		font-size: 18px
 	+mq(470px)
@@ -55,12 +62,11 @@
 			+mq(1500px)
 				content: none
 
-
 		&::before
-			left: -45px
+			left: 0
 
 		&::after
-			right: -45px
+			right: 0
 
 
 

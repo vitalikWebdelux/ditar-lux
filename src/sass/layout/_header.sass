@@ -1,5 +1,8 @@
 .dl-header
-	height: 129px 
+	height: 100px
+	// height: 129px
+	// +mq(sm)
+	// 	height: 115px
 
 	&__overlay
 		background-color: $dl-dark
@@ -45,13 +48,13 @@
 
 
 	&__phone-wrap
-		+mq(1110px)
+		+mq(850px)
 			display: none
 
 
 	&__phones-wrap
 		position: relative
-		padding-left: 52px
+		padding-left: 30px
 
 
 	&__phone
@@ -71,21 +74,20 @@
 		align-items: center
 		svg
 			background-color: #fff
-			height: 129px
+			// height: 129px
+			height: 100px
 			width: 100px
 			+mq(sm)
-				height: 119px
 				width: 95px
 			+mq(360px)
 				width: 81px
-				height: 115px
 
 	&__logo-description
 		padding-left: 20px
 		margin-bottom: 0
-		+mq(850px)
+		+mq(1110px)
 			display: none
-		
+		 
 	&__ico
 		border-radius: 5px
 		&::before
@@ -94,17 +96,12 @@
 
 		&--smartfon
 			position: absolute
-			left: 35px
+			left: -9px
 			top: 50%
 			transform: translateY(-50%)
 
 			&::before
 				font-size: 32px
-
-				position: absolute
-				top: 50%
-				left: 50%
-				transform: translate(-50%, -50%)
 
 		&--tg, &--fb, &--vb, &--ig
 			height: 44px
@@ -141,7 +138,7 @@
 				transition: bottom .2s ease-in
 				// font-family: ci
 				// font-size: 15px
-
+ 
 			
 			&:hover
 				
@@ -150,9 +147,9 @@
 				&::after
 					bottom: 0
 
-
 		&--ig
-			margin-right: 0
+			margin-right: 0 !important
+
 
 		&--phone
 			position: absolute
@@ -163,3 +160,5 @@
 				font-size: 25px
 			+mq(360px)
 				left: 10px
+
+.page-id-15 .dl-header

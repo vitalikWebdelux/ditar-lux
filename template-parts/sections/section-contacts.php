@@ -48,7 +48,7 @@ $phone2 = carbon_get_theme_option('dl_phone_2', 'text');
 							<a href="tel:+38(095)111-71-35">+38 (095) 111-71-35 Авто з США</a>
 						</p>
 						<p class="dl-white">
-							<a href="tel:+38(095)111-83-86">+38 (095) 111-83-86 інф. підтримка</a>
+							<a href="tel:+38(095)111-83-86">+38 (095) 111-83-86 Інф.підтримка</a>
 						</p>
 						<div class="dl-contacts__btn-wrap">
 							<button class="dl-btn dl-btn--border-white dl-btn--small" data-target="#modal-getInTouch" data-toggle="modal">

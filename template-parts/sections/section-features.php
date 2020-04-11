@@ -1,5 +1,7 @@
 <section class="dl-features <?php if(is_page('22')){
 	echo "dl-features--usa";
+} else {
+	echo "dl-features--autoservice";
 }?>">
 	<div class="container">
 		<div class="row">
@@ -52,7 +54,7 @@
 						<h3 class="dl-title dl-title--s dl-scheme__title text-center">
 							<span class="dl-red">Гарантія на всі види робіт</span>
 						</h3>
-						<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Надаємо гарантію на всі види, робіт використовуємо оригінальні запчастини для ремонту</span></p>
+						<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Надаємо гарантію на всі види робіт, використовуємо оригінальні запчастини для ремонту</span></p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mt-lg-30">
@@ -66,8 +68,6 @@
 						<p class="dl-desk dl-desk--m text-center dl-scheme__desk"><span>Виконуємо роботу у вказаний термін. Замінюємо та ремонтуємо лише те, що необхідно</span></p>
 					</div>
 				</div>
-			
-
 			<?php } ?>
 		</div>
 	</div>

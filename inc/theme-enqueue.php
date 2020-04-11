@@ -30,6 +30,8 @@ if ( ! function_exists( 'ditarlux_scripts' ) ) {
 
 		wp_enqueue_script( 'dl-libs', get_template_directory_uri() . '/assets/js/vendor.min.js', array('jquery'), $js_version, true );
 
+		wp_enqueue_script( 'dl-TweenMax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.3/TweenMax.min.js', array('jquery'), $js_version, true );
+		wp_enqueue_script( 'dl-amazonaws', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js', array('jquery'), $js_version, true );
 		wp_enqueue_script( 'dl-custom', get_template_directory_uri() . '/assets/js/custom.min.js', array('dl-libs'), $js_version, true );
 
 		wp_localize_script( 'dl-custom', '$dl_js', array(
